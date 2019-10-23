@@ -1,0 +1,490 @@
+/* Colors
+    Dark1: #c28f50 rgb(194,143,80)
+    Dark2: #d9b992 rgb(217,185,146)
+    Dark2: #bb8f5c
+    Dark-Light1: #999
+    Dark-Light:2 #ccc
+    Light: #eee
+    fa-comment-medical: #da6926     أيقونة تعليق جديد
+    fa-user-plus: #367cba           أيقونة مستخدم جديد
+    fa-newspaper: #55ab36           أيقونة موضوع جديد
+
+    primary: #007bff    --> #c28f50 rgb(194,143,80)
+    secondary: #6c757d  --> #d9b992 rgb(217,185,146)
+    success: #28a745
+    danger: #dc3545
+    warning: #ffc107
+    info: #17a2b8
+    light: #f8f9fa
+    dark: #343a40       --> #646464 rgb(100,100,100)
+
+
+*/
+
+
+/* RTL */
+body {
+    direction: rtl;
+}
+body, .dropdown-menu {
+    text-align: right;
+}
+.modal-footer > :not(:last-child) {
+    margin-right: 0;
+    margin-left: .25rem;
+}
+.modal-footer > :not(:first-child) {
+    margin-left: 0;
+    margin-right: .25rem;
+}
+.modal-header .close {
+    margin-left: -1rem;
+    margin-right: auto;
+}
+table.table-bordered.dataTable th:last-child, table.table-bordered.dataTable th:last-child, table.table-bordered.dataTable td:last-child, table.table-bordered.dataTable td:last-child {
+    border-right-width: 1px;
+}
+
+
+/* التنسيقات الافتراضية */
+body {
+    background-image: url("../images/bg.png");
+    font-family: 'Almarai', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, h7 {
+    line-height: 1.5;
+}
+a, a:link {
+    text-decoration: none;
+    color: #c28f50;
+}
+a:hover {
+    color: #d9b992;
+}
+.text-primary {
+    color: #c28f50 !important;
+}
+.text-secondary {
+    color: #d9b992 !important;
+}
+.text-dark {
+    color: #646464 !important;
+}
+.bg-primary {
+    background: #c28f50 !important;
+}
+.bg-secondary {
+    background: #d9b992 !important;
+}
+.bg-dark {
+    background: #646464 !important;
+}
+.btn-primary {
+    background: #c28f50;
+    border-color: #c28f50;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:not(:disabled):not(.disabled):active {
+    background: #d9b992;
+    border-color: #c28f50;
+}
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:focus {
+    box-shadow: 0 0 0 .2rem rgba(3194,143,80,.25)
+}
+.custom-checkbox .custom-control-label::before, 
+.custom-checkbox .custom-control-label::after {
+    cursor: pointer;
+}
+.form-control:focus {
+    border-color: #c28f50;
+    box-shadow: 0 0 0 .2rem rgba(194,143,80,.25);
+}
+.list-group-flush .list-group-item:first-child {
+    border-top: 0;
+}
+a .icon, .nav-link, .nav-item {
+    -webkit-transition: color .3s ease;
+    transition: color .3s ease;
+}
+i.icon {
+    background: #c28f50;
+    padding: 5px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+}
+i.icon::before{
+    font-size: 20px;
+}
+
+
+/* تنسيق الهيدر */
+header a, header btn {
+    cursor: pointer;
+}
+
+
+header .dropdown:hover {
+    background: #f8f9fa;
+}
+header .dropdown-menu {
+    min-width: 50%;
+    border-radius: 0;
+}
+header .dropdown-menu .dropdown-item {
+    border: 0;
+}
+a:hover .icon, header .dropdown.show .icon {
+    background: #d9b992;
+}
+header .social a {
+    padding: 0 2px;
+}
+header input {
+    background: #d9b992 !important;
+    color: #fff !important;
+}
+
+
+/* تنسيق القائمة الرئيسية */
+nav {
+    background: #fff;
+}
+nav .nav-link {
+    color: #c28f50;
+}
+nav .nav-item:not(.active):not(.dropdown-item):hover > .nav-link {
+    color: #d9b992;
+    border-bottom: 2px #c28f50 solid;
+}
+nav .nav-item.active:not(.dropdown-item) > .nav-link {
+    border-bottom: 2px #c28f50 solid;
+    white-space: nowrap;
+}
+
+nav .dropdown-menu .dropdown-item:not(:last-child) {
+    border-bottom: 1px solid #d9b992;
+}
+
+/* تنسيق أيقونة إلى أعلى الموقع */
+#backToTop {
+    width: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: #c28f50;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 3px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+#backToTop:hover {
+    background-color: #d9b992;
+    color: #fff;
+}
+
+/* تنسيق محتوى الواجهة الرئيسية */
+main > .container {
+    background: #fff;
+}
+.container > section {
+    padding: 15px 0;
+}
+.container > section h4 {
+    color: #c28f50;
+    border-bottom: 1px #d9b992 solid;
+    padding-bottom: 16px;
+    font-weight: 600;
+}
+.container > section h4 span {
+    border-bottom: 4px #c28f50 solid;
+    padding: 13px 0;
+}
+.box-fluid {
+    background: #d9b992;
+    padding: 30px 15px;
+}
+.box-fluid  h4 {
+    color: #fff;
+    font-size: 200%;
+    font-weight: 600;
+    text-align: center;
+}
+.box-fluid section .card {
+    border: 0;
+    box-shadow: unset;
+}
+section .card {
+    overflow: hidden;
+    border: 1px #c28f50 solid;
+    border-radius: 0;
+    box-shadow: 0 0 5px 1px  rgba(194,143,80,.50);
+}
+section .card .cardImg {
+    position: relative;
+    background: #000;
+}
+section .card .cardImg img {
+    width: 100%;
+}
+section .card .cardImg .icon {
+    position: absolute;
+    top: -30px;
+    left: 45%;
+}
+section .card .cardImg:hover .icon {
+    top: 70px;
+    z-index: 1;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+section .card .cardImg:hover img {
+    opacity: 0.5;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+
+/* تنسيق البوكس 1 - السلايدر الرئيسي */
+#primSlider .carousel-caption {
+    bottom: 0;
+    left: unset;
+    right: unset;
+    padding: 10px 20px;
+    background: rgba(0,0,0,.5);
+}
+#primSlider .carousel-indicators {
+    right: unset;
+    left: 10px;
+    margin-left: 0;
+    margin-right: 0;
+}
+#primSlider .carousel-indicators li, #picturesSlider .carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+
+/* تنسيق البوكس 2 - سلايدر الأخبار*/
+
+#subSlider1 h5 {
+    color: #c28f50;
+}
+#subSlider1 .read-more span, #subSlider1 .read-more:hover i {
+    background: #c28f50;
+}
+#subSlider1 .read-more i, #subSlider1 .read-more:hover span {
+    background: #d9b992;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+#subSlider1 .carousel-control-prev, #subSlider1 .carousel-control-next {
+    width: 50px;
+    height: 80px;
+    top: 100px;
+    background: #f8f9fa;
+    color: #c28f50;
+    font-size: 40px;
+}
+#subSlider1 .carousel-indicators, 
+#subSlider2 .carousel-indicators,
+#subSlider3 .carousel-indicators,
+#subSlider4 .carousel-indicators {
+    top: -30px;
+    left: 0;
+    right: unset;
+    bottom: unset;
+    margin: 0;
+    padding: 0;
+}
+#subSlider1 .carousel-indicators li, 
+#subSlider2 .carousel-indicators li,
+#subSlider3 .carousel-indicators li,
+#subSlider4 .carousel-indicators li {
+    background-color: #c28f50;
+}
+
+
+/* تنسيق البوكس 3 و 4 - سلايدر جلسات وقرارات مجلس الوزراء*/
+#subSlider2 .carousel-inner .carousel-item a,
+#subSlider3 .carousel-inner .carousel-item a {
+    background: #fff;
+    color: #c28f50;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+#subSlider2 .carousel-inner .carousel-item a:first-child,
+#subSlider3 .carousel-inner .carousel-item a:first-child {
+    border-bottom: 1px #d9b992 solid;
+}
+#subSlider2 .carousel-inner .carousel-item a:hover,
+#subSlider3 .carousel-inner .carousel-item a:hover {
+    background: #d9b992;
+    color: #fff;
+}
+
+
+/* تنسيق البوكس 6 - تويب الكلمات واللقاءات */
+#tabsPrime .nav-link {
+    position: relative;
+}
+#tabsPrime .nav-link i {
+    position: absolute;
+    top: 45%;
+    right: 0;
+}
+#tabsPrime .nav-link small {
+    color: #646464;
+}
+#tabsPrime .nav-link.active small {
+    color: #fff;
+}
+#tabsPrime .nav-link.active {
+    background: #d9b992;
+    border-radius: 0;
+}
+
+
+/* تنسيق البوكس 7 - سلايدر المناسبات الرسمية */
+#subSlider5 .carousel-control-prev, #subSlider5 .carousel-control-next,
+#subSlider6 .carousel-control-prev, #subSlider6 .carousel-control-next {
+    width: 30px;
+    height: 80px;
+    top: 30%;
+    color: #f8f9fa;
+    background: #c28f50;
+    font-size: 30px;
+}
+
+section .official {
+    background: #fff;
+}
+section .official img {
+    height: 120px;
+}
+
+
+/* تنسيق البوكس 9 - Video Slider */
+#videoSlider .carousel-indicators {
+    position: relative;
+    right: unset;
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+#videoSlider .carousel-indicators li {
+    width: 50px;
+    height: 50px;
+    background-color: #c28f50;
+    background-size: cover;
+    background-position: center;
+}
+#videoSlider .carousel-control-prev, #videoSlider .carousel-control-next {
+    width: 20px;
+    height: 20px;
+    top: unset;
+    bottom: 25px;
+    color: #c28f50;
+    font-size: 20px;
+    z-index: 20;
+}
+
+/* تنسيق البوكس 10 - Infographic Slider */
+#infographicSlider .card {
+    border: 0;
+    box-shadow: unset;
+}
+#infographicSlider .card .card-body {
+    position: absolute;
+    bottom: 0px;
+    padding: 0;
+    visibility: visible;
+}
+#infographicSlider .card .card-body .card-title {
+    position: relative;
+    bottom: -120px;
+    padding: 15px;
+    margin: 0;
+    opacity: 0;
+    background: radial-gradient(rgba(217,185,146,0.9) 70%, rgba(194,143,80) 200%);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+#infographicSlider .card:hover .card-body .card-title {
+    opacity: 1;
+    bottom: 0;
+}
+#infographicSlider .card .card-body .card-title a {
+    color: #fff;
+}
+#infographicSlider .carousel-control-prev, #infographicSlider .carousel-control-next {
+    width: 30px;
+    height: 80px;
+    top: 30%;
+    color: #c28f50;
+    background: #f8f9fa;
+    font-size: 30px;
+}
+
+/* تنسيق البوكس 11 - Pictures Slider */
+
+/* external css: flickity.css */
+#picturesSlider .carousel {
+    /* background: #FAFAFA; */
+    opacity: 1;
+    -webkit-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+}
+.carousel.is-hidden {
+    display: none;
+}
+.carousel.flickity-enabled {
+    opacity: 1;
+}
+.carousel-cell {
+    width: 66%;
+    height: 300px;
+    margin-right: 10px;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+    display: flex;
+}
+.carousel-cell img {
+    max-height: 80%;
+    margin: auto;
+}
+.carousel-cell.is-selected img {
+    max-height: 100%;
+}
+  /* cell number */
+.carousel-cell:before {
+    display: none;
+    text-align: center;
+    content: counter(carousel-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+}
+
+/* تنسيق بوكس الأكثر زيارة */
+#mostVisited.list-group .list-group-item {
+    background-color: unset;
+    border: 0;
+    color: #fff;
+}
+#mostVisited.list-group .list-group-item:hover {
+    color: #f8f9fa;
+}
+
+
+
+
