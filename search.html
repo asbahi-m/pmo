@@ -1,0 +1,468 @@
+    
+<!DOCTYPE html>
+<html lang="ar">
+    <head>
+        <title>رئاسة الوزراء - نتائج البحث</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- CSS Files -->
+        <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="libraries/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="css/flickity.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- JS Files -->
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="libraries/popper/popper.min.js"></script>
+        <script src="libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="js/flickity.pkgd.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+
+    <body>
+        <header class="container d-block d-md-flex justify-content-between px-2 px-3 py-4">
+            <a class="d-flex align-items-center" href="#">
+                <img src="images/logo.png" alt="رئاسة الوزراء">
+            </a>
+
+            <div class="d-flex flex-column flex-sm-row flex-md-column">
+                <div class="dropdown mb-2">
+                    <a id="choiceLang" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-globe icon"></i><span>العربية</span><i class="fas fa-angle-down px-1"></i>
+                    </a>
+                    <div class="dropdown-menu p-0 text-center" aria-labelledby="choiceLang">
+                        <a class="dropdown-item" href="#"><span>English</span></a>
+                    </div>
+                </div>
+                <div class="d-flex social mb-2">
+                    <a href="#" target="_blank" title="إنستغرام"><i class="fab fa-instagram icon"></i></a>
+                    <a href="#" target="_blank" title="تويتر"><i class="fab fa-twitter icon"></i></a>
+                    <a href="#" target="_blank" title="فيس بوك"><i class="fab fa-facebook-f icon"></i></a>
+                    <a href="#" target="_blank" title="RSS"><i class="fas fa-rss icon"></i></a>
+                </div>
+                <div>
+                    <input type="search" class="form-control form-control-sm" placeholder="بحث" required>
+                </div>
+            </div>
+        </header>
+
+        <nav class="navbar navbar-expand-lg sticky-top container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav px-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="menu-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>مجلس الوزراء</span><i class="fas fa-angle-down px-1"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="menu-1">
+                            <li class="nav-item dropdown-item">
+                                <a class="nav-link" href="#"><span>عن مجلس الوزراء</span></a>
+                            </li>
+                            <li class="nav-item dropdown-item">
+                                <a class="nav-link" href="#"><span>التشكيلة الوزارية</span></a>
+                            </li>
+                            <li class="nav-item dropdown-item">
+                                <a class="nav-link" href="#"><span>آلية عمل المجلس</span></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="menu-2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>رئيس مجلس الوزراء</span><i class="fas fa-angle-down px-1"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="menu-2">
+                            <li class="nav-item dropdown-item">
+                                <a class="nav-link" href="#"><span>السيرة الذاتية</span></a>
+                            </li>
+                            <li class="nav-item dropdown-item">
+                                <a class="nav-link" href="#"><span>الأدوار والمسؤوليات</span></a>
+                            </li>
+                            <li class="nav-item dropdown-item">
+                                <a class="nav-link" href="#"><span>الكلمات واللقاءات</span></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="menu-3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>رئاسة مجلس الوزراء</span><i class="fas fa-angle-down px-1"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="menu-3">
+                            <li class="nav-item dropdown-item">
+                                <a class="nav-link" href="#"><span>مكتب رئيس الوزراء</span></a>
+                            </li>
+                            <li class="nav-item dropdown-item">
+                                <a class="nav-link" href="#"><span>الأمانة العامة لمجلس الوزراء</span></a>
+                            </li>
+                            <li class="nav-item dropdown-item">
+                                <a class="nav-link" href="#"><span>الجهات التابعة</span></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="menu-4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>الوزارات والدوائر الحكومية</span><i class="fas fa-angle-down px-1"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="menu-4">
+                            <li class="nav-item dropdown-item">
+                                <a class="nav-link" href="#"><span>الوزارات والدوائر الحكومية</span></a>
+                            </li>
+                            <li class="nav-item dropdown-item">
+                                <a class="nav-link" href="#"><span>الهيكل التنظيمي للوزارات والدوائر الحكومية</span></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="menu-5" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>المركز الإعلامي</span><i class="fas fa-angle-down px-1"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="menu-5">
+                            <li class="nav-item dropdown-item">
+                                <a class="nav-link" href="#"><span>أخبار المجلس</span></a>
+                            </li>
+                            <li class="nav-item dropdown-item">
+                                <a class="nav-link" href="#"><span>اجتماعات مجلس الوزراء</span></a>
+                            </li>
+                            <li class="nav-item dropdown-item">
+                                <a class="nav-link" href="#"><span>اللجان الوزارية</span></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="menu-other" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-h px-1"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="menu-other">
+                            <li class="nav-item dropdown-item dropdown">
+                                <a class="nav-link" href="#" id="menu-6" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span>تقارير وإصدارات</span><i class="fas fa-angle-down px-1"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="menu-6">
+                                    <li class="nav-item dropdown-item">
+                                        <a class="nav-link" href="#"><span>خطط الحكومة</span></a>
+                                    </li>
+                                    <li class="nav-item dropdown-item">
+                                        <a class="nav-link" href="#"><span>إنجازات الحكومة</span></a>
+                                    </li>
+                                    <li class="nav-item dropdown-item">
+                                        <a class="nav-link" href="#"><span>تقارير ودراسات</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+        
+                            <li class="nav-item dropdown-item dropdown">
+                                <a class="nav-link" href="#" id="menu-7" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span>عن اليمن</span><i class="fas fa-angle-down px-1"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="menu-7">
+                                    <li class="nav-item dropdown-item">
+                                        <a class="nav-link" href="#"><span>نظام الحكم</span></a>
+                                    </li>
+                                    <li class="nav-item dropdown-item">
+                                        <a class="nav-link" href="#"><span>المعلومات الأساسية</span></a>
+                                    </li>
+                                    <li class="nav-item dropdown-item">
+                                        <a class="nav-link" href="#"><span>مؤتمر الحوار الوطني</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+        
+                            <li class="nav-item dropdown-item">
+                                <a class="nav-link" href="#" id="menu-8"><span>دليل الخدمات</span></a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+            </div>
+        </nav>
+
+        <a id="backToTop" title="إلى الأعلى" href="#"><span class="fa fa-angle-up"></span></a>
+        
+        <main class="page search">
+            <nav class="box-fluid head d-flex justify-content-center" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">نتائج البحث</li>
+                </ol>
+            </nav>
+
+            <div class="container py-3">
+                <div class="row">
+                    <section class="col-lg-9 col-md-12"> <!-- عناصر البحث -->
+                        <div class="card mb-3">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <div class="cardImg">
+                                        <a type="button"><i class="far fa-image icon"></i></a>
+                                        <img src="images/slider-2.jpg" alt="...">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body d-flex flex-column">
+                                        <nav class="d-flex justify-content-center" aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item active" aria-current="page"><a href="#">الأخبار</a></li>
+                                            </ol>
+                                        </nav>
+                                        <h5 class="card-title"><a href="#">مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</a></h5>
+                                        <div class="d-flex justify-content-end">
+                                            <a class="ml-1" type="button"><i class="fab fa-facebook-f icon-outline"></i></a>
+                                            <a class="ml-1" type="button"><i class="fab fa-twitter icon-outline"></i></a>
+                                            <a href="#" class="read-more text-white">
+                                                <small class="d-flex">
+                                                    <span class="p-1">اقرأ المزيد</span>
+                                                    <i class="fas fa-angle-down p-1 pt-2"></i>
+                                                </small>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card mb-3">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <div class="cardImg">
+                                        <a type="button"><i class="far fa-image icon"></i></a>
+                                        <img src="images/slider-3.jpg" alt="...">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body d-flex flex-column">
+                                        <nav class="d-flex justify-content-center" aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="#">رئيس مجلس الوزراء</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page"><a href="#">الكلمات واللقاءات</a></li>
+                                            </ol>
+                                        </nav>
+                                        <h5 class="card-title"><a href="#">مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</a></h5>
+                                        <div class="d-flex justify-content-end">
+                                            <a class="ml-1" type="button"><i class="fab fa-facebook-f icon-outline"></i></a>
+                                            <a class="ml-1" type="button"><i class="fab fa-twitter icon-outline"></i></a>
+                                            <a href="#" class="read-more text-white">
+                                                <small class="d-flex">
+                                                    <span class="p-1">اقرأ المزيد</span>
+                                                    <i class="fas fa-angle-down p-1 pt-2"></i>
+                                                </small>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card mb-3">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <div class="cardImg">
+                                        <a type="button"><i class="far fa-image icon"></i></a>
+                                        <img src="images/slider-4.jpg" alt="...">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body d-flex flex-column">
+                                        <nav class="d-flex justify-content-center" aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="#">رئاسة مجلس الوزراء</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page"><a href="#">الجهات التابعة</a></li>
+                                            </ol>
+                                        </nav>
+                                        <h5 class="card-title"><a href="#">مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</a></h5>
+                                        <div class="d-flex justify-content-end">
+                                            <a class="ml-1" type="button"><i class="fab fa-facebook-f icon-outline"></i></a>
+                                            <a class="ml-1" type="button"><i class="fab fa-twitter icon-outline"></i></a>
+                                            <a href="#" class="read-more text-white">
+                                                <small class="d-flex">
+                                                    <span class="p-1">اقرأ المزيد</span>
+                                                    <i class="fas fa-angle-down p-1 pt-2"></i>
+                                                </small>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-3">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <div class="cardImg">
+                                        <a type="button"><i class="far fa-image icon"></i></a>
+                                        <img src="images/slider-2.jpg" alt="...">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body d-flex flex-column">
+                                        <nav class="d-flex justify-content-center" aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item active" aria-current="page"><a href="#">الأخبار</a></li>
+                                            </ol>
+                                        </nav>
+                                        <h5 class="card-title"><a href="#">مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</a></h5>
+                                        <div class="d-flex justify-content-end">
+                                            <a class="ml-1" type="button"><i class="fab fa-facebook-f icon-outline"></i></a>
+                                            <a class="ml-1" type="button"><i class="fab fa-twitter icon-outline"></i></a>
+                                            <a href="#" class="read-more text-white">
+                                                <small class="d-flex">
+                                                    <span class="p-1">اقرأ المزيد</span>
+                                                    <i class="fas fa-angle-down p-1 pt-2"></i>
+                                                </small>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-3">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <div class="cardImg">
+                                        <a type="button"><i class="far fa-image icon"></i></a>
+                                        <img src="images/slider-3.jpg" alt="...">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body d-flex flex-column">
+                                        <nav class="d-flex justify-content-center" aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item active" aria-current="page"><a href="#">الأخبار</a></li>
+                                            </ol>
+                                        </nav>
+                                        <h5 class="card-title"><a href="#">مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</a></h5>
+                                        <div class="d-flex justify-content-end">
+                                            <a class="ml-1" type="button"><i class="fab fa-facebook-f icon-outline"></i></a>
+                                            <a class="ml-1" type="button"><i class="fab fa-twitter icon-outline"></i></a>
+                                            <a href="#" class="read-more text-white">
+                                                <small class="d-flex">
+                                                    <span class="p-1">اقرأ المزيد</span>
+                                                    <i class="fas fa-angle-down p-1 pt-2"></i>
+                                                </small>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled"> <!-- الانتقال إلى أول صفحة -->
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true" aria-label="First">
+                                        <i class="fas fa-angle-double-right" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+
+                                <li class="page-item disabled"> <!-- الانتقال إلى الصفحة السابقة -->
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <i class="fas fa-angle-right" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+
+                                <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+
+                                <li class="page-item"> <!-- الانتقال إلى الصفحة التالية -->
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <i class="fas fa-angle-left" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+
+                                <li class="page-item"> <!-- الانتقال إلى آخر صفحة -->
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true" aria-label="Last">
+                                        <i class="fas fa-angle-double-left" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </section>
+                    
+                    <aside class="col-lg-3 d-none d-lg-block"> <!-- القائمة الجانبية -->
+                        <section>
+                            <h4><span>آخر الأخبار</span></h4>
+                            <div class="list-group list-group-flush">
+                                <a class="list-group-item text-dark" href="#">ذكرى ثورة 26 سبتمبر</a>
+                                <a class="list-group-item text-dark" href="#">ذكرى ثورة 26 سبتمبر</a>
+                                <a class="list-group-item text-dark" href="#">ذكرى ثورة 26 سبتمبر</a>
+                                <a class="list-group-item text-dark" href="#">ذكرى ثورة 26 سبتمبر</a>
+                                <a class="list-group-item text-dark" href="#">ذكرى ثورة 26 سبتمبر</a>
+                            </div>
+                            <hr class="d-block d-lg-none">
+                        </section>
+
+                        <section>
+                            <h4><span>المناسبات الرسمية</span></h4>
+                            <div class="row official">
+                                <div class="col-12 col-sm-6 col-lg-12">
+                                    <div id="subSlider5" class="carousel slide border rounded p-3" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <a class="d-block text-center" href="#"><img src="images/slider-5.jpg" alt="..."></a>
+                                            </div>
+            
+                                            <div class="carousel-item">
+                                                <a class="d-block text-center" href="#"><img src="images/slider-5.jpg" alt="..."></a>
+                                            </div>
+                                        </div>
+                    
+                                        <a class="carousel-control-prev" href="#subSlider5" role="button" data-slide="prev">
+                                            <span class="fas fa-chevron-left" aria-hidden="true"></span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#subSlider5" role="button" data-slide="next">
+                                            <span class="fas fa-chevron-right" aria-hidden="true"></span>
+                                        </a>
+                                    </div>
+                                    <hr class="d-block d-sm-none d-lg-block">
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-lg-12">
+                                    <div class="border rounded text-center p-3">
+                                        <a href="#"><img src="images/slider-6.jpg" alt="..."></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h4><span>مراسلتنا</span></h4>
+                            <form class="text-left">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="contactName" placeholder="الاسم" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="contactEmail" placeholder="البريد" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" id="contactMsg" rows="3" placeholder="الموضوع"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">إرسال</button>
+                            </form>
+                        </section>
+                    </aside>
+                </div>
+            </div>
+        </main>
+
+        <footer class="box-fluid">
+            <div class="container text-white text-center">
+                <span>جميع الحقوق محفوظة لرئاسة الوزراء في الجمهورية اليمنية ©</span>
+            </div>
+        </footer>
+    </body>
+</html>

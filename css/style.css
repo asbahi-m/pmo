@@ -545,6 +545,12 @@ section .official img {
 }
 
 
+/* تنسيق صفحة البحث */
+.search nav.head .breadcrumb .breadcrumb-item {
+    font-size: 20px;
+}
+
+
 /* تنسيق محتوى الصفحة الداخلية */
 .post article h5 {
     color: #c28f50;
