@@ -571,3 +571,18 @@ section .official img {
     background: #f8f9fa;
     padding: 10px;
 }
+
+
+/* تنسيق صفحة الوسائط */
+.multimedia .card:hover .card-body,
+.multimedia .card:hover .card-body a {
+    background: #d9b992;
+    color: #fff;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.multimedia .card:hover img {
+    opacity: 0.8;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
