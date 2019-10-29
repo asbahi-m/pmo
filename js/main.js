@@ -8,14 +8,13 @@ $(document).ready(function () {
             $('#backToTop').fadeOut();
         }
     });
-    $(document).ready(function() {
-        $("#backToTop").click(function(event) {
-            event.preventDefault();
-            $("html, body").animate({ scrollTop: 0 }, "slow");
-            return false;
-        });
-
+    
+    $("#backToTop").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
     });
+
     // external js: flickity.pkgd.js
     // show
     var $carousel = $('#picturesSlider .carousel').removeClass('is-hidden');
