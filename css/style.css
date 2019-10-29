@@ -209,7 +209,7 @@ body > nav .dropdown-menu .dropdown-item:not(:last-child) {
 main > .container {
     background: #fff;
 }
-.container section {
+main > .container > section {
     padding: 15px 0;
 }
 .container section h4 {
@@ -524,7 +524,9 @@ section .official img {
     padding: 0 5px;
     color: #646464;
 }
-
+.page .card-body p {
+    text-align: justify;
+}
 .page .card .icon-outline {
     opacity: 0;
     -webkit-transition: all .3s;
@@ -540,4 +542,26 @@ section .official img {
 }
 .page .pagination .page-item:not(.disabled):not(.active) .page-link {
     color: #c28f50;
+}
+
+
+/* تنسيق محتوى الصفحة الداخلية */
+.post article h5 {
+    color: #c28f50;
+}
+.post article p {
+    text-align: justify;
+}
+.post article figure {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+.post article figure img {
+    margin-bottom: 0;
+    border-radius: 10px 0 0 0;
+}
+.post article figure figcaption {
+    background: #f8f9fa;
+    padding: 10px;
 }
