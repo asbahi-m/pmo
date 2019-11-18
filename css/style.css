@@ -54,6 +54,12 @@ body {
 h1, h2, h3, h4, h5, h6, h7 {
     line-height: 1.5;
 }
+h4 {
+    font-size: 20px
+}
+h5 {
+    font-size: 18px;
+}
 a, a:link {
     text-decoration: none;
     color: #c28f50;
@@ -70,10 +76,16 @@ a:hover {
 .text-dark {
     color: #646464 !important;
 }
+.dropdown-item:active a,
+.dropdown-item:active a {
+    color: #fff;
+}
 .bg-primary {
     background: #c28f50 !important;
 }
-.bg-secondary {
+.bg-secondary,
+.dropdown-item.active, 
+.dropdown-item:active {
     background: #d9b992 !important;
 }
 .bg-dark {
@@ -135,9 +147,18 @@ header .dropdown.show .icon {
     background: #d9b992;
     color: #fff;
 }
+[type=button], [type=reset], [type=submit], button {
+    -webkit-appearance: unset;
+}
+.breadcrumb-item + .breadcrumb-item {
+    padding-left: unset;
+}
 
 
 /* تنسيق الهيدر */
+header img {
+    max-width: 100%;
+}
 header a, header btn {
     cursor: pointer;
 }
@@ -171,10 +192,10 @@ body > nav .nav-link {
 }
 body > nav .nav-item:not(.active):not(.dropdown-item):hover > .nav-link {
     color: #d9b992;
-    border-bottom: 2px #c28f50 solid;
+    border-bottom: 2px #d9b992 solid;
 }
 body > nav .nav-item.active:not(.dropdown-item) > .nav-link {
-    border-bottom: 2px #c28f50 solid;
+    border-bottom: 2px solid #c28f50;
     white-space: nowrap;
 }
 
@@ -389,6 +410,10 @@ section .official img {
 
 
 /* تنسيق البوكس 9 - Video Slider */
+#videoSlider .carousel-inner iframe {
+    width: 100%;
+    /* height: 330px; */
+}
 #videoSlider .carousel-indicators {
     position: relative;
     right: unset;
