@@ -53,6 +53,7 @@ body {
 }
 h1, h2, h3, h4, h5, h6, h7 {
     line-height: 1.5;
+    text-align: justify;
 }
 h4 {
     font-size: 20px
@@ -66,6 +67,14 @@ a, a:link {
 }
 a:hover {
     color: #d9b992;
+}
+a.text-white:hover {
+    color: #eee !important;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+p {
+    text-align: justify;
 }
 .text-primary {
     color: #c28f50 !important;
@@ -102,8 +111,23 @@ a:hover {
     background: #d9b992;
     border-color: #c28f50;
 }
-.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:focus, .page-link:focus {
-    box-shadow: 0 0 0 .2rem rgba(3194,143,80,.25);
+.btn-primary:not(:disabled):not(.disabled):active:focus, 
+.btn-primary:focus, .page-link:focus {
+    box-shadow: 0 0 0 .2rem rgba(194,143,80,.25);
+}
+.btn-secondary {
+    background: #d9b992;
+    border-color: #d9b992;
+}
+.btn-secondary:hover, 
+.btn-secondary:focus, 
+.btn-secondary:not(:disabled):not(.disabled):active {
+    background: #c28f50;
+    border-color: #d9b992;
+}
+.btn-secondary:not(:disabled):not(.disabled):active:focus, 
+.btn-secondary:focus, .page-link:focus {
+    box-shadow: 0 0 0 .2rem rgba(217,185,146,.25);
 }
 .custom-checkbox .custom-control-label::before, 
 .custom-checkbox .custom-control-label::after {
@@ -180,6 +204,9 @@ header .social a {
 header input {
     background: #d9b992 !important;
     color: #fff !important;
+}
+header input.form-control::placeholder {
+    color: #fff;
 }
 
 
@@ -290,31 +317,52 @@ main > .container > section {
 }
 .read-more span, .read-more:hover i {
     background: #c28f50;
+    opacity: 1;
 }
 .read-more i, .read-more:hover span {
-    background: #d9b992;
+    background: #c28f50;
+    opacity: .7;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
 
 /* تنسيق البوكس 1 - السلايدر الرئيسي */
-#primSlider .carousel-caption {
-    bottom: 0;
-    left: unset;
+#primSlider .carousel-indicators,
+#videoSlider .carousel-indicators {
+    position: relative;
     right: unset;
-    padding: 10px 20px;
-    background: rgba(0,0,0,.5);
-}
-#primSlider .carousel-indicators {
-    right: unset;
-    left: 10px;
     margin-left: 0;
     margin-right: 0;
+    padding-right: 15px;
+    padding-left: 15px;
 }
-#primSlider .carousel-indicators li, #picturesSlider .carousel-indicators li {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
+
+#primSlider .carousel-indicators li {
+    width: 100%;
+    /* height: 100px; */
+}
+#primSlider .carousel-indicators li,
+#videoSlider .carousel-indicators li {
+    background-color: #d9b992;
+    background-size: cover;
+    background-position: center;
+}
+#videoSlider .carousel-indicators li {
+    width: 50px;
+    height: 50px;
+}
+
+#primSlider .carousel-control-prev, 
+#primSlider .carousel-control-next, 
+#videoSlider .carousel-control-prev,
+#videoSlider .carousel-control-next {
+    width: 20px;
+    height: 20px;
+    top: unset;
+    bottom: 40%;
+    color: #c28f50;
+    font-size: 20px;
+    z-index: 20;
 }
 
 
@@ -413,30 +461,6 @@ section .official img {
 #videoSlider .carousel-inner iframe {
     width: 100%;
     /* height: 330px; */
-}
-#videoSlider .carousel-indicators {
-    position: relative;
-    right: unset;
-    margin-left: 0;
-    margin-right: 0;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-#videoSlider .carousel-indicators li {
-    width: 50px;
-    height: 50px;
-    background-color: #c28f50;
-    background-size: cover;
-    background-position: center;
-}
-#videoSlider .carousel-control-prev, #videoSlider .carousel-control-next {
-    width: 20px;
-    height: 20px;
-    top: unset;
-    bottom: 25px;
-    color: #c28f50;
-    font-size: 20px;
-    z-index: 20;
 }
 
 /* تنسيق البوكس 10 - Infographic Slider */

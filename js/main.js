@@ -23,6 +23,10 @@ $(document).ready(function () {
     // init Flickity
     $carousel.flickity();
 
+    /* ضبط مقاس ارتفاع إطارات أيقونات السلايدر الرئيسي بالتناسب مع عرض الإطار */
+    var responsiveImg = $("#primSlider .carousel-indicators li");
+    responsiveImg.height($(responsiveImg).innerWidth()/(4/3));
+
     /* ضبط مقاس ارتفاع إطارات الفيديو بالتناسب مع عرض الإطار */
     var iframeV = $("#videoSlider .carousel-inner iframe");
     iframeV.height($(iframeV).innerWidth()/(16/9));
