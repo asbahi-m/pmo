@@ -515,12 +515,27 @@ section .official img {
     opacity: 1;
 }
 .carousel-cell {
-    width: 66%;
-    height: 300px;
+    width: 66.66%;
+    height: 412px;
     margin-right: 10px;
     border-radius: 5px;
     counter-increment: carousel-cell;
     display: flex;
+}
+@media only screen and (max-width: 767.98px) {
+    .carousel-cell {
+        height: 200px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+    .carousel-cell {
+        height: 260px;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .carousel-cell {
+        height: 350px;
+    }
 }
 .carousel-cell img {
     max-height: 80%;
