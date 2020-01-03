@@ -17,6 +17,7 @@
     info: #17a2b8
     light: #f8f9fa
     dark: #343a40       --> #646464 rgb(100,100,100)
+    muted: #6c757d
 
 
 */
@@ -101,7 +102,9 @@ p {
     background: #646464 !important;
 }
 .btn-primary, 
-.page-item.active .page-link {
+.page-item.active .page-link,
+.btn-primary:not(:disabled):not(.disabled).active,
+.badge-primary {
     background: #c28f50;
     border-color: #c28f50;
 }
@@ -115,7 +118,8 @@ p {
 .btn-primary:focus, .page-link:focus {
     box-shadow: 0 0 0 .2rem rgba(194,143,80,.25);
 }
-.btn-secondary {
+.btn-secondary,
+.badge-secondary {
     background: #d9b992;
     border-color: #d9b992;
 }
@@ -291,6 +295,9 @@ main > .container > section {
 } */
 .card {
     overflow: hidden;
+}
+.card .card-title {
+    margin-bottom: 0.5rem;
 }
 .card .cardImg:hover {
     position: relative;
@@ -634,6 +641,30 @@ section .official img {
 .post article figure figcaption {
     background: #f8f9fa;
     padding: 10px;
+}
+
+/* تنسيق بوكس بيانات التعريف */
+.post-meta {
+    font-size: 80%;
+    margin-right: 10px;
+}
+.post-meta span:not(:last-child)::after {
+    content: "|";
+    padding: 0 10px;
+}
+.post-meta span i {
+    padding-left: 5px;
+}
+
+/* تنسيق بوكس التعليقات */
+.post #comments .picture-profile .fa-user-circle {
+    font-size: 60px;
+    color: #ccc;
+}
+.post #comments .comment-content {
+    padding: 10px 0;
+    margin-top: 10px;
+    color: #646464;
 }
 
 
