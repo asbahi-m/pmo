@@ -515,13 +515,13 @@ section .official img {
     -webkit-transition: opacity 0.4s;
     transition: opacity 0.4s;
 }
-.carousel.is-hidden {
+#picturesSlider .carousel.is-hidden {
     display: none;
 }
-.carousel.flickity-enabled {
+#picturesSlider .carousel.flickity-enabled {
     opacity: 1;
 }
-.carousel-cell {
+#picturesSlider .carousel-cell {
     width: 66.66%;
     height: 412px;
     margin-right: 10px;
@@ -530,29 +530,29 @@ section .official img {
     display: flex;
 }
 @media only screen and (max-width: 767.98px) {
-    .carousel-cell {
+    #picturesSlider .carousel-cell {
         height: 200px;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
-    .carousel-cell {
+    #picturesSlider .carousel-cell {
         height: 260px;
     }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
-    .carousel-cell {
+    #picturesSlider .carousel-cell {
         height: 350px;
     }
 }
-.carousel-cell img {
+#picturesSlider .carousel-cell img {
     max-height: 80%;
     margin: auto;
 }
-.carousel-cell.is-selected img {
+#picturesSlider .carousel-cell.is-selected img {
     max-height: 100%;
 }
-  /* cell number */
-.carousel-cell:before {
+/* cell number */
+#picturesSlider .carousel-cell:before {
     display: none;
     text-align: center;
     content: counter(carousel-cell);
@@ -641,6 +641,44 @@ section .official img {
 .post article figure figcaption {
     background: #f8f9fa;
     padding: 10px;
+}
+.post article .post-resource a {
+    display: inline-block;
+    background: #eee;
+    border-radius: 20px;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+}
+.post article .picture-profile .fa-user-circle {
+    font-size: 40px;
+    color: #ccc;
+}
+.post .post-audio audio {
+    width: 100%;
+}
+.post .post-video {
+    text-align: center;
+}
+.post #picturesSlider .carousel {
+    margin-bottom: 50px;
+}
+.post #picturesSlider .carousel-cell {
+    height: 300px;
+}
+@media only screen and (max-width: 499.98px) {
+    .post #picturesSlider .carousel-cell {
+        height: 180px;
+    }
+}
+@media only screen and (min-width: 500px) and (max-width: 991.98px) {
+    .post #picturesSlider .carousel-cell {
+        height: 200px;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .post #picturesSlider .carousel-cell {
+        height: 250px;
+    }
 }
 
 /* تنسيق بوكس بيانات التعريف */
