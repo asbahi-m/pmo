@@ -45,6 +45,29 @@ body, .dropdown-menu {
 table.table-bordered.dataTable th:last-child, table.table-bordered.dataTable th:last-child, table.table-bordered.dataTable td:last-child, table.table-bordered.dataTable td:last-child {
     border-right-width: 1px;
 }
+body > :not(header) form .input-group {
+    direction: ltr;
+}
+form .input-group input {
+    direction: rtl;
+}
+.custom-control {
+    padding-left: unset;
+    padding-right: 1rem;
+}
+:not(th) > .custom-control > .custom-control-label {
+    padding-right: 10px;
+}
+.custom-control-label::before, 
+.custom-control-label::after {
+    left: unset;
+    right: -1rem;
+}
+.custom-file-label::after {
+    left: 0;
+    right: unset;
+    content: "استعراض";
+}
 
 
 /* التنسيقات الافتراضية */
@@ -104,9 +127,18 @@ p {
 .btn-primary, 
 .page-item.active .page-link,
 .btn-primary:not(:disabled):not(.disabled).active,
+.custom-control-input:checked ~ .custom-control-label::before,
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before, 
 .badge-primary {
     background: #c28f50;
     border-color: #c28f50;
+}
+.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    background: rgba(194,143,80,.5);
+    border-color: rgba(194,143,80,.25);
+}
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: rgba(194,143,80,.5);
 }
 .btn-primary:hover, 
 .btn-primary:focus, 
@@ -115,7 +147,8 @@ p {
     border-color: #c28f50;
 }
 .btn-primary:not(:disabled):not(.disabled):active:focus, 
-.btn-primary:focus, .page-link:focus {
+.btn-primary:focus, .page-link:focus, 
+.custom-control-input:focus ~ .custom-control-label::before {
     box-shadow: 0 0 0 .2rem rgba(194,143,80,.25);
 }
 .btn-secondary,
@@ -137,7 +170,8 @@ p {
 .custom-checkbox .custom-control-label::after {
     cursor: pointer;
 }
-.form-control:focus {
+.form-control:focus, 
+.custom-select:focus {
     border-color: #c28f50;
     box-shadow: 0 0 0 .2rem rgba(194,143,80,.25);
 }
@@ -619,6 +653,38 @@ section .official img {
 /* تنسيق صفحة البحث */
 .search nav.head .breadcrumb .breadcrumb-item {
     font-size: 20px;
+}
+.search #searchPlace .cate-all {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    min-height: 40px;
+    max-height: 300px;
+    overflow: auto;
+}
+@media only screen and (max-width: 575.98px) {
+    .search #searchPlace .cate-all {
+        display: block;
+    }
+}
+.search #searchPlace .cate-all li {
+    margin-top: 10px;
+}
+.search #searchPlace .cate-all li .custom-control-label::before {
+    border-radius: 0;
+}
+.search #searchPlace .cate-all .children {
+    padding-right: 10px;
+}
+.search #searchWords ~ .fa-times-circle {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    color: #646464;
+    cursor: pointer;
+    z-index: 3;
 }
 
 

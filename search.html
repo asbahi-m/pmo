@@ -177,6 +177,59 @@
             <div class="container py-3">
                 <div class="row">
                     <section class="col-lg-9 col-md-12"> <!-- عناصر البحث -->
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-3 col-6">
+                                    <select id="searchType" class="custom-select" name="searchType">
+                                        <option value="all">العنوان/المحتوى</option>
+                                        <option value="title" selected>العنوان</option>
+                                        <option value="content">المحتوى</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-3 col-6">
+                                    <select id="searchStatus" class="custom-select" name="searchStatus">
+                                        <option value="contains" selected>يحتوي على</option>
+                                        <option value="startWith">يبدأ بـ</option>
+                                    </select>
+                                </div>
+                                <div class="form-group input-group col-md-6 col-sm-12">
+                                    <div class="input-group-prepend">
+                                        <button type="submit" class="btn btn-secondary"><i class="fas fa-search"></i></button>
+                                    </div>
+                                    <input type="search" id="searchWords" class="form-control" name="searchWords" placeholder="كلمات البحث" value="الوزراء" required>
+                                    <i class="far fa-times-circle search-clear"></i>
+                                </div>
+                            </div>
+
+                            <a type="button" id="searchAll" class="text-dark text-left d-block mb-3" data-toggle="collapse" data-target="#searchPlace" aria-expanded="false" aria-controls="searchPlace">
+                                <span>البحث في جميع الأقسام</span> <i class="fas fa-angle-down"></i>
+                            </a>
+                            
+                            <div class="collapse" id="searchPlace">
+                                <ul class="cate-all">
+                                    <li id="check" class="custom-control custom-checkbox">
+                                        <input id="checkAll" type="checkbox" class="custom-control-input" checked>
+                                        <label class="custom-control-label" for="checkAll">جميع الأقسام</label>
+                                    </li>
+
+                                    <li id="category-3" class="custom-control custom-checkbox">
+                                        <input id="in-cate-3" value="3" type="checkbox" class="custom-control-input" name="postCate[]" checked>
+                                        <label class="custom-control-label" for="in-cate-3">رئاسة الوزراء</label>
+                                    </li>
+
+                                    <li id="category-2" class="custom-control custom-checkbox">
+                                        <input id="in-cate-2" value="2" type="checkbox" class="custom-control-input" name="postCate[]" checked>
+                                        <label class="custom-control-label" for="in-cate-2">أخبار</label>
+                                    </li>
+
+                                    <li id="category-7" class="custom-control custom-checkbox">
+                                        <input id="in-cate-7" value="7" type="checkbox" class="custom-control-input" name="postCate[]" checked>
+                                        <label class="custom-control-label" for="in-cate-7">مقالات</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
+
                         <div class="card mb-3">
                             <div class="row no-gutters">
                                 <div class="col-md-4">
