@@ -27,8 +27,8 @@
                 <img src="images/logo.png" alt="رئاسة الوزراء">
             </a>
 
-            <div class="d-flex flex-column flex-sm-row flex-md-column">
-                <div class="dropdown mb-2">
+            <div class="d-flex flex-column">
+                <div class="dropdown mb-2"> <!-- أيقونة تغيير اللغة -->
                     <a id="choiceLang" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-globe icon mr-1"></i><span>العربية</span><i class="fas fa-angle-down px-1"></i>
                     </a>
@@ -36,18 +36,19 @@
                         <a class="dropdown-item" href="#"><span>English</span></a>
                     </div>
                 </div>
-                <div class="d-flex social mb-2">
+                <div class="d-flex social mb-2"> <!-- أيقونات التواصل الاجتماعي -->
                     <a href="#" target="_blank" title="إنستغرام"><i class="fab fa-instagram icon"></i></a>
                     <a href="#" target="_blank" title="تويتر"><i class="fab fa-twitter icon"></i></a>
                     <a href="#" target="_blank" title="فيس بوك"><i class="fab fa-facebook-f icon"></i></a>
                     <a href="#" target="_blank" title="RSS"><i class="fas fa-rss icon"></i></a>
+                    <a href="contact-us.html" title="تواصل معنا" class="ml-auto"><i class="fas fa-mail-bulk icon mr-auto"></i></a>
                 </div>
-                <form>
+                <form> <!-- بوكس البحث -->
                     <div class="input-group input-group-sm mb-2">
                         <div class="input-group-prepend">
                             <button type="submit" class="btn btn-secondary"><i class="fas fa-search"></i></button>
                         </div>
-                        <input type="search" class="form-control " placeholder="بحث" required>
+                        <input type="search" class="form-control " placeholder="كلمات البحث" required>
                     </div>
                 </form>
             </div>
@@ -57,7 +58,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
-            <div class="collapse navbar-collapse" id="menu">
+            <div class="collapse navbar-collapse" id="menu"> <!-- شريط القائمة الرئيسية - النافبار -->
                 <ul class="navbar-nav px-0">
                     <li class="nav-item active">
                         <a class="nav-link" href="#"><i class="fas fa-home pr-1"></i><span>الرئيسية</span></a>
@@ -114,52 +115,34 @@
                             </li>
                         </ul>
                     </li>
-                    <!-- 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" id="menu-other" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-h px-1"></i>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="menu-other">
-                            <li class="nav-item dropdown-item dropdown">
-                                <a class="nav-link" href="#" id="menu-6" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span>تقارير وإصدارات</span><i class="fas fa-angle-down px-1"></i>
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="menu-6">
-                                    <li class="nav-item dropdown-item">
-                                        <a class="nav-link" href="#"><span>خطط الحكومة</span></a>
-                                    </li>
-                                    <li class="nav-item dropdown-item">
-                                        <a class="nav-link" href="#"><span>إنجازات الحكومة</span></a>
-                                    </li>
-                                    <li class="nav-item dropdown-item">
-                                        <a class="nav-link" href="#"><span>تقارير ودراسات</span></a>
-                                    </li>
-                                </ul>
-                            </li>
-        
-                            <li class="nav-item dropdown-item dropdown">
-                                <a class="nav-link" href="#" id="menu-7" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span>عن اليمن</span><i class="fas fa-angle-down px-1"></i>
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="menu-7">
-                                    <li class="nav-item dropdown-item">
-                                        <a class="nav-link" href="#"><span>نظام الحكم</span></a>
-                                    </li>
-                                    <li class="nav-item dropdown-item">
-                                        <a class="nav-link" href="#"><span>المعلومات الأساسية</span></a>
-                                    </li>
-                                    <li class="nav-item dropdown-item">
-                                        <a class="nav-link" href="#"><span>مؤتمر الحوار الوطني</span></a>
-                                    </li>
-                                </ul>
-                            </li>
-        
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" id="menu-8"><span>دليل الخدمات</span></a>
-                            </li>
-                        </ul>
+                </ul>
+            </div>
+            <div class="dropdown" id="userProfile"> <!-- بوكس تسجيل الدخول -->
+                <a type="button" class="d-flex align-items-center" role="button" id="dropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="">مرحباً, محمد أحمد</span>
+                    <div class="picture-profile"><i class="fas fa-user-circle"></i></div>
+                    <i class="fas fa-angle-down"></i>
+                </a>
+                <ul class="dropdown-menu py-0" aria-labelledby="dropdownUser">
+                    <li class="user-info d-flex align-items-center" href="#">
+                        <div class="picture-profile mr-2"><i class="fas fa-user-circle"></i></div>
+                        <div>
+                            <div>محمد أحمد</div>
+                            <small class="text-warning">مشترك</small>
+                        </div>
                     </li>
-                     -->
+                    <li class="nav-item dropdown-item">
+                        <a class="nav-link text-muted" href="#">
+                            <i class="fas fa-user-edit"></i>
+                            <span class="ml-2">تحرير الملف الشخصي</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown-item">
+                        <a class="nav-link text-muted" href="#">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span class="ml-2">تسجيل الخروج</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -393,13 +376,13 @@
                         </section>
 
                         <section>
-                            <h4><span>مراسلتنا</span></h4>
+                            <h4><span>تواصل معنا</span></h4>
                             <form class="text-right">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="contactName" placeholder="الاسم" required>
+                                    <input type="text" class="form-control" id="contactName" placeholder="اسمك (*)" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="contactEmail" placeholder="البريد" required>
+                                    <input type="email" class="form-control" id="contactEmail" placeholder="بريدك الإلكتروني (*)" required>
                                 </div>
                                 <div class="form-group">
                                     <textarea class="form-control" id="contactMsg" rows="3" placeholder="الموضوع"></textarea>

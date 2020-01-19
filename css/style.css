@@ -211,7 +211,6 @@ header input.form-control::placeholder {
     color: #fff;
 }
 
-
 /* تنسيق القائمة الرئيسية */
 body > nav {
     background: #fff;
@@ -230,6 +229,43 @@ body > nav .nav-item.active:not(.dropdown-item) > .nav-link {
 
 body > nav .dropdown-menu .dropdown-item:not(:last-child) {
     border-bottom: 1px solid #d9b992;
+}
+nav #userProfile #dropdownUser {
+    color: #646464;
+}
+nav #userProfile #dropdownUser .picture-profile i {
+    font-size: 20px;
+    margin-right: 5px;
+    margin-left: 3px;
+    display: block;
+}
+@media only screen and (max-width: 575.98px) {
+    nav #userProfile {
+        margin-left: 50px;
+    }
+}
+nav #userProfile .dropdown-menu .user-info {
+    width: 100%;
+    height: 80px;
+    padding: 10px 10px;
+    background: #303030;
+    color: #f8f9fa;
+    border-radius: .25rem;
+    border: 2px solid #404040;
+}
+nav #userProfile .dropdown-menu .dropdown-item {
+    padding: 0;
+}
+nav #userProfile .dropdown-menu .dropdown-item:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+nav #userProfile .dropdown-menu .dropdown-item i {
+    width: 20px;
+    margin-left: 3px;
+}
+nav #userProfile .picture-profile i {
+    font-size: 60px;
+    color: #ccc;
 }
 
 /* تنسيق أيقونة إلى أعلى الموقع */
@@ -745,4 +781,20 @@ section .official img {
     opacity: 0.8;
     -webkit-transition: all .3s;
     transition: all .3s;
+}
+
+
+/* تنسيق صفحة تواصل معنا */
+/* .contact-us .contact-info {
+    border-right: 1px solid #ccc;
+} */
+.contact-us .contact-info h5 {
+    font-weight: bold;
+}
+.contact-us .contact-info a {
+    direction: ltr;
+}
+.contact-us .contact-info i {
+    font-size: 20px;
+    color: #646464;
 }
