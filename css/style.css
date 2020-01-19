@@ -18,54 +18,15 @@
     light: #f8f9fa
     dark: #343a40       --> #646464 rgb(100,100,100)
     muted: #6c757d
-
-
 */
 
 
 /* RTL */
 body {
     direction: rtl;
-}
-body, .dropdown-menu {
     text-align: right;
 }
-.modal-footer > :not(:last-child) {
-    margin-right: 0;
-    margin-left: .25rem;
-}
-.modal-footer > :not(:first-child) {
-    margin-left: 0;
-    margin-right: .25rem;
-}
-.modal-header .close {
-    margin-left: -1rem;
-    margin-right: auto;
-}
-table.table-bordered.dataTable th:last-child, table.table-bordered.dataTable th:last-child, table.table-bordered.dataTable td:last-child, table.table-bordered.dataTable td:last-child {
-    border-right-width: 1px;
-}
-body > :not(header) form .input-group {
-    direction: ltr;
-}
-form .input-group input {
-    direction: rtl;
-}
-.custom-control {
-    padding-left: unset;
-    padding-right: 1rem;
-}
-:not(th) > .custom-control > .custom-control-label {
-    padding-right: 10px;
-}
-.custom-control-label::before, 
-.custom-control-label::after {
-    left: unset;
-    right: -1rem;
-}
 .custom-file-label::after {
-    left: 0;
-    right: unset;
     content: "استعراض";
 }
 
@@ -166,7 +127,7 @@ p {
 .btn-secondary:focus, .page-link:focus {
     box-shadow: 0 0 0 .2rem rgba(217,185,146,.25);
 }
-.custom-checkbox .custom-control-label::before, 
+.custom-checkbox .custom-control-label, 
 .custom-checkbox .custom-control-label::after {
     cursor: pointer;
 }
@@ -212,8 +173,11 @@ header .dropdown.show .icon {
 [type=button], [type=reset], [type=submit], button {
     -webkit-appearance: unset;
 }
-.breadcrumb-item + .breadcrumb-item {
-    padding-left: unset;
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+    cursor: pointer;
 }
 
 
@@ -371,7 +335,6 @@ main > .container > section {
 #primSlider .carousel-indicators,
 #videoSlider .carousel-indicators {
     position: relative;
-    right: unset;
     margin-left: 0;
     margin-right: 0;
     padding-right: 15px;
@@ -425,7 +388,6 @@ main > .container > section {
 #subSlider3 .carousel-indicators,
 #subSlider4 .carousel-indicators {
     top: -30px;
-    left: 0;
     right: unset;
     bottom: unset;
     margin: 0;
@@ -626,7 +588,6 @@ section .official img {
     color: #f8f9fa;
 }
 .page nav .breadcrumb-item + .breadcrumb-item::before {
-    padding: 0 5px;
     color: #646464;
 }
 .page .card-body p {
@@ -681,7 +642,7 @@ section .official img {
 .search #searchWords ~ .fa-times-circle {
     position: absolute;
     top: 10px;
-    left: 50px;
+    left: 10px;
     color: #646464;
     cursor: pointer;
     z-index: 3;
