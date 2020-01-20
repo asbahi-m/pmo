@@ -785,9 +785,6 @@ section .official img {
 
 
 /* تنسيق صفحة تواصل معنا */
-/* .contact-us .contact-info {
-    border-right: 1px solid #ccc;
-} */
 .contact-us .contact-info h5 {
     font-weight: bold;
 }
@@ -797,4 +794,10 @@ section .official img {
 .contact-us .contact-info i {
     font-size: 20px;
     color: #646464;
+}
+
+
+/* تنسيق القائمة الجانبية */
+aside > section:not(:first-child) {
+    padding-top: 20px;
 }

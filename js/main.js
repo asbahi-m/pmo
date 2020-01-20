@@ -81,5 +81,45 @@ $(document).ready(function () {
             $("#searchWords ~ .search-clear").show();
         }
     })
+
+    /////////////////////////// بوكس عارض الصور lightbox --> modal
+    $(".cardImg .icon, .cardImg").click(function() {
+        $(this).attr({
+            "data-toggle": "modal",
+            "data-target":"#imgModal"
+        });
+        var img = $(this).parent().parent().find('img'), 
+        src = img.attr('src'),
+        alt = img.attr('alt');
+        var modalHtml = 
+        '<div class="modal fade" id="imgModal" tabindex="-1" role="dialog" aria-labelledby="imgModalTitle" aria-hidden="true">'+
+            '<div class="modal-dialog modal-lg" role="document">'+
+                '<div class="modal-content">'+
+                    '<div class="modal-header">'+
+                        '<h5 class="modal-title" id="imgModalTitle">'+alt+'</h5>'+
+                        '<button type="button" class="close" data-dismiss="modal" aria-label="Close">'+
+                            '<span aria-hidden="true">&times;</span>'+
+                        '</button>'+
+                    '</div>'+
+                    '<div class="modal-body d-flex">'+
+                        '<img>'+
+                    '</div>'+
+                '</div>'+
+            '</div>'+
+        '</div>';
+        $("main").before(modalHtml);
+
+        $("#imgModal").on("show.bs.modal", function(e) {
+            $(this).find("img").attr({
+                "src": src,
+                "alt": alt
+            });
+        })
+
+        $("#imgModal").on("hidden.bs.modal", function(e) {
+            $(this).remove();
+        })
+    })
+
     
 });
