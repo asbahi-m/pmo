@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar">
     <head>
-        <title>رئاسة الوزراء - نتائج البحث</title>
+        <title>رئاسة الوزراء - اجتماعات</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -149,71 +149,22 @@
 
         <a id="backToTop" title="إلى الأعلى" href="#"><span class="fa fa-angle-up"></span></a>
         
-        <main class="page search">
+        <main class="page">
             <nav class="box-fluid head" aria-label="breadcrumb">
                 <div class="container">
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item active" aria-current="page">نتائج البحث</li>
+                        <li class="breadcrumb-item">
+                            <a href="index.html"><i class="fas fa-home mr-1"></i><span>الرئيسية</span></a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="#">رئاسة الوزراء</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">اجتماعات</li>
                     </ul>
                 </div>
             </nav>
 
             <div class="container py-3">
                 <div class="row">
-                    <section class="col-lg-9 col-md-12"> <!-- عناصر البحث -->
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-md-3 col-6">
-                                    <select id="searchType" class="custom-select" name="searchType">
-                                        <option value="all">العنوان/المحتوى</option>
-                                        <option value="title" selected>العنوان</option>
-                                        <option value="content">المحتوى</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-3 col-6">
-                                    <select id="searchStatus" class="custom-select" name="searchStatus">
-                                        <option value="contains" selected>يحتوي على</option>
-                                        <option value="startWith">يبدأ بـ</option>
-                                    </select>
-                                </div>
-                                <div class="form-group input-group col-md-6 col-sm-12">
-                                    <div class="input-group-prepend">
-                                        <button type="submit" class="btn btn-secondary"><i class="fas fa-search"></i></button>
-                                    </div>
-                                    <input type="search" id="searchWords" class="form-control" name="searchWords" placeholder="كلمات البحث" value="الوزراء" required>
-                                    <i class="far fa-times-circle search-clear"></i>
-                                </div>
-                            </div>
-
-                            <a type="button" id="searchAll" class="text-dark text-right d-block mb-3" data-toggle="collapse" data-target="#searchPlace" aria-expanded="false" aria-controls="searchPlace">
-                                <span>البحث في جميع الأقسام</span> <i class="fas fa-angle-down"></i>
-                            </a>
-                            
-                            <div class="collapse" id="searchPlace">
-                                <ul class="cate-all">
-                                    <li id="check" class="custom-control custom-checkbox">
-                                        <input id="checkAll" type="checkbox" class="custom-control-input" checked>
-                                        <label class="custom-control-label" for="checkAll">جميع الأقسام</label>
-                                    </li>
-
-                                    <li id="category-3" class="custom-control custom-checkbox">
-                                        <input id="in-cate-3" value="3" type="checkbox" class="custom-control-input" name="postCate[]" checked>
-                                        <label class="custom-control-label" for="in-cate-3">رئاسة الوزراء</label>
-                                    </li>
-
-                                    <li id="category-2" class="custom-control custom-checkbox">
-                                        <input id="in-cate-2" value="2" type="checkbox" class="custom-control-input" name="postCate[]" checked>
-                                        <label class="custom-control-label" for="in-cate-2">أخبار</label>
-                                    </li>
-
-                                    <li id="category-7" class="custom-control custom-checkbox">
-                                        <input id="in-cate-7" value="7" type="checkbox" class="custom-control-input" name="postCate[]" checked>
-                                        <label class="custom-control-label" for="in-cate-7">مقالات</label>
-                                    </li>
-                                </ul>
-                            </div>
-                        </form>
-
+                    <section class="col-lg-9 col-md-12"> <!-- عناصر التصنيف -->
                         <div class="list-layout">
                             <div class="card mb-3">
                                 <div class="row no-gutters">
@@ -233,6 +184,7 @@
                                                     <a class="text-dark" href="category.html"><i class="fas fa-sitemap"></i>اجتماعات</a>
                                                 </span>
                                             </div>
+                                            <p class="card-text">عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن</p>
                                             <div class="d-flex justify-content-end">
                                                 <a class="mr-1" type="button"><i class="fab fa-facebook-f icon-outline"></i></a>
                                                 <a class="mr-1" type="button"><i class="fab fa-twitter icon-outline"></i></a>
@@ -266,6 +218,7 @@
                                                     <a class="text-dark" href="category.html"><i class="fas fa-sitemap"></i>اجتماعات</a>
                                                 </span>
                                             </div>
+                                            <p class="card-text">عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن</p>
                                             <div class="d-flex justify-content-end">
                                                 <a class="mr-1" type="button"><i class="fab fa-facebook-f icon-outline"></i></a>
                                                 <a class="mr-1" type="button"><i class="fab fa-twitter icon-outline"></i></a>
@@ -299,6 +252,7 @@
                                                     <a class="text-dark" href="category.html"><i class="fas fa-sitemap"></i>اجتماعات</a>
                                                 </span>
                                             </div>
+                                            <p class="card-text">عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن</p>
                                             <div class="d-flex justify-content-end">
                                                 <a class="mr-1" type="button"><i class="fab fa-facebook-f icon-outline"></i></a>
                                                 <a class="mr-1" type="button"><i class="fab fa-twitter icon-outline"></i></a>
@@ -332,6 +286,7 @@
                                                     <a class="text-dark" href="category.html"><i class="fas fa-sitemap"></i>اجتماعات</a>
                                                 </span>
                                             </div>
+                                            <p class="card-text">عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن</p>
                                             <div class="d-flex justify-content-end">
                                                 <a class="mr-1" type="button"><i class="fab fa-facebook-f icon-outline"></i></a>
                                                 <a class="mr-1" type="button"><i class="fab fa-twitter icon-outline"></i></a>
@@ -365,6 +320,7 @@
                                                     <a class="text-dark" href="category.html"><i class="fas fa-sitemap"></i>اجتماعات</a>
                                                 </span>
                                             </div>
+                                            <p class="card-text">عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن</p>
                                             <div class="d-flex justify-content-end">
                                                 <a class="mr-1" type="button"><i class="fab fa-facebook-f icon-outline"></i></a>
                                                 <a class="mr-1" type="button"><i class="fab fa-twitter icon-outline"></i></a>

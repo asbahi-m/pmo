@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         <!-- CSS Files -->
-        <link rel="stylesheet" href="libraries/bootstrap/css/rtl/bootstrap.min.css">
+        <link rel="stylesheet" href="libraries/bootstrap/rtl/css/bootstrap.min.css">
         <link rel="stylesheet" href="libraries/fontawesome/css/all.min.css">
         <link rel="stylesheet" href="css/flickity.css">
         <link rel="stylesheet" href="css/style.css">
@@ -16,7 +16,7 @@
         <!-- JS Files -->
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="libraries/popper/popper.min.js"></script>
-        <script src="libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="libraries/bootstrap/rtl/js/bootstrap.bundle.min.js"></script>
         <script src="js/flickity.pkgd.js"></script>
         <script src="js/main.js"></script>
     </head>
@@ -150,14 +150,16 @@
         <a id="backToTop" title="إلى الأعلى" href="#"><span class="fa fa-angle-up"></span></a>
         
         <main class="page post article">
-            <nav class="box-fluid head d-flex justify-content-center" aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="index.html"><i class="fas fa-home mr-1"></i><span>الرئيسية</span></a>
-                    </li>
-                    <li class="breadcrumb-item"><a href="#">رئيس الوزراء</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">لقاء رئيس الوزراء بالتشكيلة الوزارية</li>
-                </ol>
+            <nav class="box-fluid head" aria-label="breadcrumb">
+                <div class="container">
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html"><i class="fas fa-home mr-1"></i><span>الرئيسية</span></a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="#">رئيس الوزراء</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">لقاء رئيس الوزراء بالتشكيلة الوزارية</li>
+                    </ul>
+                </div>
             </nav>
 
             <div class="container py-3">
@@ -166,7 +168,7 @@
                         <article>
                             <h5>لقاء رئيس الوزراء بالتشكيلة الوزارية</h5>
                             <div class="post-meta text-muted d-flex flex-wrap"> <!-- بوكس بيانات التعريف -->
-                                <span class="post-comments"><i class="far fa-images"></i>ألبوم</span>
+                                <span class="post-gallery"><i class="far fa-images"></i>ألبوم</span>
                                 <span class="post-date"><i class="far fa-clock"></i>26 أغسطس 2019م</span>
                                 <span class="post-views"><i class="far fa-eye"></i>22</span>
                                 <span class="post-comments"><i class="far fa-comment-dots"></i>3</span>
@@ -178,14 +180,57 @@
 
                             <div class="post-gallery">
                                 <div id="picturesSlider">
-                                    <div class="carousel is-hidden">
-                                        <div class="carousel-cell"><img src="images/img1-1024×576.jpg" class="d-block w-100" alt="..."></div>
-                                        <div class="carousel-cell"><img src="images/img2-1024×576.jpg" class="d-block w-100" alt="..."></div>
-                                        <div class="carousel-cell"><img src="images/img3-1024×576.jpg" class="d-block w-100" alt="..."></div>
-                                        <div class="carousel-cell"><img src="images/img4-1024×576.jpg" class="d-block w-100" alt="..."></div>
-                                        <div class="carousel-cell"><img src="images/img5-1024×576.jpg" class="d-block w-100" alt="..."></div>
-                                        <div class="carousel-cell"><img src="images/img6-1024×576.jpg" class="d-block w-100" alt="..."></div>
-                                    </div>
+                                        <div class="carousel is-hidden">
+                                            <div class="carousel-cell">
+                                                <div class="card">
+                                                    <div class="cardImg" style="background-image: url('images/img1-1024×576.jpg')">
+                                                        <span type="button" class="icon"><i class="far fa-image"></i></span>
+                                                    </div>
+                                                    <h5 class="custom-height text-white">وصف ألبوم الصور</h5>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="carousel-cell">
+                                                <div class="card">
+                                                    <div class="cardImg" style="background-image: url('images/img2-1024×576.jpg')">
+                                                        <span type="button" class="icon"><i class="far fa-image"></i></span>
+                                                    </div>
+                                                    <h5 class="custom-height text-white">وصف ألبوم الصور</h5>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-cell">
+                                                <div class="card">
+                                                    <div class="cardImg" style="background-image: url('images/img3-1024×576.jpg')">
+                                                        <span type="button" class="icon"><i class="far fa-image"></i></span>
+                                                    </div>
+                                                    <h5 class="custom-height text-white">وصف ألبوم الصور</h5>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-cell">
+                                                <div class="card">
+                                                    <div class="cardImg" style="background-image: url('images/img4-1024×576.jpg')">
+                                                        <span type="button" class="icon"><i class="far fa-image"></i></span>
+                                                    </div>
+                                                    <h5 class="custom-height text-white">وصف ألبوم الصور</h5>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-cell">
+                                                <div class="card">
+                                                    <div class="cardImg" style="background-image: url('images/img5-1024×576.jpg')">
+                                                        <span type="button" class="icon"><i class="far fa-image"></i></span>
+                                                    </div>
+                                                    <h5 class="custom-height text-white">وصف ألبوم الصور</h5>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-cell">
+                                                <div class="card">
+                                                    <div class="cardImg" style="background-image: url('images/img6-1024×576.jpg')">
+                                                        <span type="button" class="icon"><i class="far fa-image"></i></span>
+                                                    </div>
+                                                    <h5 class="custom-height text-white">وصف ألبوم الصور</h5>
+                                                </div>
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
 

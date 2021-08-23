@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         <!-- CSS Files -->
-        <link rel="stylesheet" href="libraries/bootstrap/css/rtl/bootstrap.min.css">
+        <link rel="stylesheet" href="libraries/bootstrap/rtl/css/bootstrap.min.css">
         <link rel="stylesheet" href="libraries/fontawesome/css/all.min.css">
         <link rel="stylesheet" href="css/flickity.css">
         <link rel="stylesheet" href="css/style.css">
@@ -16,7 +16,7 @@
         <!-- JS Files -->
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="libraries/popper/popper.min.js"></script>
-        <script src="libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="libraries/bootstrap/rtl/js/bootstrap.bundle.min.js"></script>
         <script src="js/flickity.pkgd.js"></script>
         <script src="js/main.js"></script>
     </head>
@@ -150,15 +150,17 @@
         <a id="backToTop" title="إلى الأعلى" href="#"><span class="fa fa-angle-up"></span></a>
         
         <main class="page post">
-            <nav class="box-fluid head d-flex justify-content-center" aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="index.html"><i class="fas fa-home mr-1"></i><span>الرئيسية</span></a>
-                    </li>
-                    <li class="breadcrumb-item"><a href="#">رئاسة الوزراء</a></li>
-                    <li class="breadcrumb-item"><a href="category.html">اجتماعات</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</li>
-                </ol>
+            <nav class="box-fluid head" aria-label="breadcrumb">
+                <div class="container">
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html"><i class="fas fa-home mr-1"></i><span>الرئيسية</span></a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="#">رئاسة الوزراء</a></li>
+                        <li class="breadcrumb-item"><a href="category.html">اجتماعات</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</li>
+                    </ul>
+                </div>
             </nav>
 
             <div class="container py-3">
@@ -176,8 +178,14 @@
                             </div>
                             <hr>
 
-                            <figure class="figure text-center w-75">
-                                <img src="images/img1-1024×576.jpg" class="figure-img img-fluid rounded-top" alt="...">
+                            <!-- الصورة البارزة للمشاركة -->
+                            <figure class="figure text-center">
+                                <div class="figure-img">
+                                    <div class="icon">
+                                        <span type="button"><i class="fas fa-expand"></i></span>
+                                    </div>
+                                    <img src="images/img1-1024×576.jpg" class="img-fluid rounded-top" alt="...">
+                                </div>
                                 <figcaption class="figure-caption rounded-bottom">رئيس الوزراء يعقد اجتماعه مع الوزراء في عدن</figcaption>
                             </figure>
 
@@ -189,10 +197,9 @@
                                 عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن
                                 عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن
                             </p>
-                            <figure class="figure text-center w-75">
-                                <img src="images/img2-1024×576.jpg" class="figure-img img-fluid rounded-top" alt="...">
-                                <figcaption class="figure-caption rounded-bottom">رئيس الوزراء يعقد اجتماعه مع الوزراء في عدن</figcaption>
-                            </figure>
+                            <!-- <p> -->
+                                <img src="images/img2-1024×576.jpg" class="" alt="...">
+                            <!-- </p> -->
                             <p>
                                 عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن
                                 عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن
