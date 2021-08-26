@@ -1,6 +1,7 @@
-$(document).ready(function () {
+$(function () {
+    if ($(document).scrollTop() > 100) $('#backToTop').fadeIn();
     /* Scroll to top when arrow up clicked BEGIN */
-    $(window).scroll(function() {
+    $(window).on("scroll", function() {
         var height = $(window).scrollTop();
         if (height > 100) {
             $('#backToTop').fadeIn();
@@ -8,20 +9,20 @@ $(document).ready(function () {
             $('#backToTop').fadeOut();
         }
     });
-    $("#backToTop").click(function(event) {
+    $("#backToTop").on("click", function(event) {
         event.preventDefault();
         $("html, body").animate({ scrollTop: 0 }, "slow");
         return false;
     });
 
     /* خصائص وحركات السلايدرات */
-    $('#subSlider1').carousel({
-        interval: 20000,
+    $('#primSlider').carousel({
+        interval: 10000,
     })
     $('#subSlider2').carousel({
         interval: 7000,
     })
-    $('#subSlider3').carousel({
+    $('#subSlider3, #subSlider6').carousel({
         interval: 9000
     })
     $('#subSlider4').carousel({
@@ -31,27 +32,16 @@ $(document).ready(function () {
         interval: 20000
     })
 
-    /* سلايدر الصور في الرئيسية */
-    if ($('#picturesSlider .carousel').val() !== undefined) {
-    // external js: flickity.pkgd.js
-    // show
-        var $carousel = $('#picturesSlider .carousel').removeClass('is-hidden');
-        // trigger redraw for transition
-        $carousel[0].offsetHeight;
-        // init Flickity
-        $carousel.flickity();
-    }
-
     /* تكبير الصورة البارزة عد النقر على الأيقونة */
-    $(".figure-img .icon i").click(function() {
-        $(this).parentsUntil("figure").last().addClass("full");
+    $(".figure-img .icon i").on("click", function() {
+        $(".figure-img").addClass("full");
         $(this).parentsUntil("figure").find("img").hide().fadeIn(500);
 
         $("body").css("overflow","hidden");
         
-        $("body").mousedown(function(x) {
+        $("body").on("mousedown", function(x) {
             if (x.target.tagName != "IMG") {
-                console.log(x.target.tagname);
+                // console.log(x.target.tagname);
                 $(".figure-img").removeClass("full");
                 $("body").css("overflow","");
             }
@@ -59,12 +49,7 @@ $(document).ready(function () {
     })
 
     /* تكبير أي صورة داخل المشاركة */
-    $(".post article img:not(.img-fluid)").click(function() {
-        var heigheImg = $(this).height(),
-            widthImg = $(this).width(),
-            marginLeftImg = $(this).css("margin-left"),
-            marginRightImg = $(this).css("margin-right");
-            // console.log(marginImg);
+    $(".post article img:not(.img-fluid, .picture-profile img)").on("click", function(e) {
         $(this).css({
             "height": "unset",
             "width": "unset",
@@ -83,16 +68,17 @@ $(document).ready(function () {
         
         $("body").css("overflow","hidden");
         
-        $("body").mousedown(function(x) {
+        $("body").on("mousedown", function(x) {
+            
             if (x.target.tagName != "IMG") {
-                console.log(x.target.tagname);
-                $(".post article img:not(.img-fluid)").css({
-                    "height": heigheImg,
-                    "width": widthImg,
+                // console.log(x.target.tagname);
+                $(".post article img:not(.img-fluid, .picture-profile img)").css({
+                    "max-height": "unset",
+                    "max-width": "unset",
                     "position": "relative",
                     "max-width": "75%",
-                    "margin-left": marginLeftImg,
-                    "margin-right": marginRightImg,
+                    "margin-left": "10px",
+                    "margin-right": "10px",
                     "z-index": "auto",
                     "cursor": "pointer"
                 })
@@ -100,14 +86,6 @@ $(document).ready(function () {
             }
         })
     })
-
-    /* ضبط مقاس ارتفاع إطارات أيقونات السلايدر الرئيسي بالتناسب مع عرض الإطار */
-    // var responsiveImg = $("#primSlider .carousel-indicators li");
-    // responsiveImg.height($(responsiveImg).innerWidth()/(4/3));
-
-    /* ضبط مقاس ارتفاع إطارات الفيديو بالتناسب مع عرض الإطار */
-    // var iframeV = $("#videoSlider .carousel-inner iframe");
-    // iframeV.height($(iframeV).innerWidth()/(16/9));
 
     /////////////////////////// تحديد عناصر تصنيفات البحث
     function showChecked(name, check){
@@ -141,12 +119,12 @@ $(document).ready(function () {
     }
 
     /* تحديد عناصر تصنيفات البحث */
-    $("#searchPlace input:checkbox").click(function() {
+    $("#searchPlace input:checkbox").on("click", function() {
         showChecked("input[name='postCate[]']", "input[name='postCate[]']:checked");
     });
     
     /////////////////////////// أيقونة مسح كلمات البحث
-    $(".page #searchWords ~ .search-clear").click(function() {
+    $(".page #searchWords ~ .search-clear").on("click", function() {
         $(this).parent().find("#searchWords").val("").focus();
     })
     $(".page #searchWords").on("focus keyup", function() {
@@ -159,25 +137,30 @@ $(document).ready(function () {
     })
 
     /////////////////////////// بوكس عارض الصور lightbox --> modal
-    $(".cardImg .icon").click(function() {
+    $(".cardImg .icon").on("click", function() {
         $(this).attr({
             "data-toggle": "modal",
             "data-target":"#imgModal"
         });
-        var img = $(this).parentsUntil(".card").parent().find(".cardImg"),
-        img_url = img.css("background-image").replace(/^url\(["']?/, '').replace(/["']?\)$/, ''),
+        var img = $(this).parentsUntil(".card").parent().find(".cardImg");
+        if (img.children('img').is('img')) {
+            var img_url = img.children('img').attr('src').replace('-405.', '.');
+        }
+        else {
+            var img_url = img.css("background-image").replace(/^url\(["']?/, '').replace(/["']?\)$/, '').replace('-405.', '.');
+        }
         title = $(this).parentsUntil('.card').parent().find('h5').text();
         var modalHtml = 
         '<div class="modal fade" id="imgModal" tabindex="-1" role="dialog" aria-labelledby="imgModalTitle" aria-hidden="true">\
-            <div class="modal-dialog modal-lg" role="document">\
+            <div class="modal-dialog modal-xl" role="document">\
                 <div class="modal-content">\
-                    <div class="modal-header">\
-                        <h5 class="modal-title" id="imgModalTitle">'+title+'</h5>\
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">\
-                            <span aria-hidden="true">&times;</span>\
-                        </button>\
-                    </div>\
-                    <div class="modal-body d-flex">\
+                    <div class="modal-body d-flex justify-content-center">\
+                        <div class="modal-header">\
+                            <h5 class="modal-title" id="imgModalTitle">'+title+'</h5>\
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">\
+                                <span aria-hidden="true">&times;</span>\
+                            </button>\
+                        </div>\
                         <img>\
                     </div>\
                 </div>\
@@ -197,23 +180,64 @@ $(document).ready(function () {
         })
     })
 
+    /////////////////////////// تحميل صور السلايدر الرئيسي وبوكس لقاءات بعد الانتقال إلى الشريحة التالية
+    /* $('#tabsPrime a[data-toggle="pill"]').on('shown.bs.tab', function (event) {
+        let tabPanel = $($(this).attr("href"));
+        let img = tabPanel.find("img");
+        if (tabPanel.is(".active") && !img.is("[src]")) {
+            img.attr("src", img.data("src"));
+            // console.log(tabPanel);
+        }
+    })
+    $('#primSlider').on('slid.bs.carousel', function () {
+        let img = $(this).find(".carousel-item.active img");
+        if (!img.is("[src]")) {
+            img.attr("src", img.data("src"));
+            // console.log(srcImg);
+        }
+    }) */
+
     /////////////////////////// تضمين كود اليوتيوب لسلايدر الفيديو + إيقاف/تشغيل الفيديو عند التحريك
-    $("#videoSlider .poster").each(function() {
-        $(this).click(function() {
-            if ($(this).parent().hasClass("active")){
-                $(this).hide().parent().append(
-                    '<iframe src="'+$(this).data("src")+'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-                );
-                $('#videoSlider').carousel('pause');
-            }
-        });
+    $('#videoSlider').on('slid.bs.carousel', function () {
+        $(this).find(".carousel-item:not(.active) iframe").remove();
+        $(this).find(".carousel-item:not(.active) .poster").show();
+        $(this).carousel('cycle');
+    })
+    $("#videoSlider").on("click", ".carousel-item.active .poster", function() {
+        $(this).hide();
+        $(this).after(`<iframe src="${$(this).data('video')}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`);
+        $('#videoSlider').carousel('pause');
     })
 
-    $('#videoSlider').on('slide.bs.carousel', function () {
-        if (!$(this).hasClass("active")) {
-            $("#videoSlider .carousel-item iframe").remove();
-            $("#videoSlider .carousel-item .poster").show();
+    /////////////////////////// عمل أنيمشن ظهور لأقسام وبوكسات الصفحة الرئيسية
+    function fadeSection(item) {
+        let scrTop = $(window).scrollTop();
+        let winHei = $(window).height();
+        if ((scrTop + winHei) > ($(item).offset().top + ($(item).height()/2)) && scrTop < ($(item).offset().top + $(item).height() - ($(item).height()/3))) {
+            // console.log($(window).scrollTop());
+            
+            $(item).animate({
+                "opacity": 1,
+            }, 700).removeClass("animate");
         }
-        $('#videoSlider').carousel('cycle');
+    }
+    $(".animate").each(function(index, item) {
+        $(".animate").css("opacity", "0");
+        fadeSection(item);
+        $(window).on("scroll", function() {
+            if ($(".animate").length > 0)
+                fadeSection(item);
+            else
+                $(this).off();
+        })
     })
+
+    /////////////////////////// Nice Scroll Properties
+    /* $("body").niceScroll({
+        // cursorwidth:"16px",
+        cursorcolor: "#c28f50",
+        background: "rgba(217,185,146, 0.7)",
+        cursorborder:"0",
+        // zindex: 1030,
+    }); */
 });

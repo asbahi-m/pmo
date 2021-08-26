@@ -1,30 +1,35 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html dir="rtl" lang="ar">
     <head>
-        <title>رئاسة الوزراء - رئيس الوزراء يوجه برفع وتيرة العمل لإنجاز محطة كهرباء عدن الجديدة</title>
+        <title>رئاسة مجلس الوزراء | محتوى عرض خبر</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="المكتب الإعلامي لرئاسة مجلس الوزراء اليمني.">
+        <meta name="thumbnail" content="images/logo-200x200.jpg">
+        <link rel="icon" type="image/png" href="images/favicon.png">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <!-- <meta name="twitter:card" content="summary"> -->
+        <meta property="og:url" content="index.html">
+        <meta property="og:title" content="رئاسة مجلس الوزراء | محتوى عرض خبر">
+        <meta property="og:description" content="المكتب الإعلامي لرئاسة مجلس الوزراء اليمني.">
+        <meta property="og:image" content="images/logo-400x400.jpg">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="ar_AR">
 
         <!-- CSS Files -->
-        <link rel="stylesheet" href="libraries/bootstrap/rtl/css/bootstrap.min.css">
-        <link rel="stylesheet" href="libraries/fontawesome/css/all.min.css">
-        <link rel="stylesheet" href="css/flickity.css">
+        <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
+        <!-- <link rel="stylesheet" href="css/fontawesome.min.css"> -->
+        <link rel="stylesheet" href="css/flickity.min.css">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
-
-        <!-- JS Files -->
-        <script src="js/jquery-3.4.1.min.js"></script>
-        <script src="libraries/popper/popper.min.js"></script>
-        <script src="libraries/bootstrap/rtl/js/bootstrap.bundle.min.js"></script>
-        <script src="js/flickity.pkgd.js"></script>
-        <script src="js/main.js"></script>
+        <link rel="stylesheet" href="css/fonts.css">
     </head>
 
     <body>
         <header class="container d-block d-md-flex justify-content-between px-2 px-3 py-4">
-            <a class="d-flex align-items-center" href="#">
-                <img src="images/logo.png" alt="رئاسة الوزراء">
+            <a class="d-flex align-items-center" href="index.html">
+                <img src="images/logo.jpg" alt="رئاسة مجلس الوزراء">
             </a>
 
             <div class="d-flex flex-column">
@@ -43,25 +48,25 @@
                     <a href="#" target="_blank" title="RSS"><i class="fas fa-rss icon"></i></a>
                     <a href="contact-us.html" title="تواصل معنا" class="ml-auto"><i class="fas fa-mail-bulk icon mr-auto"></i></a>
                 </div>
-                <form> <!-- بوكس البحث -->
+                <form action="search.html"> <!-- بوكس البحث -->
                     <div class="input-group input-group-sm mb-2">
                         <div class="input-group-prepend">
                             <button type="submit" class="btn btn-secondary"><i class="fas fa-search"></i></button>
                         </div>
-                        <input type="search" class="form-control " placeholder="كلمات البحث" required>
+                        <input type="search" class="form-control" placeholder="كلمات البحث" required>
                     </div>
                 </form>
             </div>
         </header>
 
         <nav class="navbar navbar-expand-lg sticky-top container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="menu"> <!-- شريط القائمة الرئيسية - النافبار -->
                 <ul class="navbar-nav px-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#"><i class="fas fa-home pr-1"></i><span>الرئيسية</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home pr-1"></i><span>الرئيسية</span></a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -70,65 +75,43 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="menu-1">
                             <li class="nav-item dropdown-item">
-                                <a class="nav-link" href="#"><span>اجتماعات</span></a>
+                                <a class="nav-link" href="blog-list.html"><span>اجتماعات المجلس</span></a>
                             </li>
                             <li class="nav-item dropdown-item">
-                                <a class="nav-link" href="#"><span>قرارات</span></a>
+                                <a class="nav-link" href="blog-list.html"><span>قرارات المجلس</span></a>
                             </li>
                             <li class="nav-item dropdown-item">
-                                <a class="nav-link" href="#"><span>بيانات</span></a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" id="menu-2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span>رئيس مجلس الوزراء</span><i class="fas fa-angle-down px-1"></i>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="menu-2">
-                            <li class="nav-item dropdown-item">
-                                <a class="nav-link" href="#"><span>السيرة الذاتية</span></a>
-                            </li>
-                            <li class="nav-item dropdown-item">
-                                <a class="nav-link" href="#"><span>أنشطة ولقاءات</span></a>
-                            </li>
-                            <li class="nav-item dropdown-item">
-                                <a class="nav-link" href="#"><span>حوارات ومقابلات</span></a>
+                                <a class="nav-link" href="blog-list.html"><span>بيانات المجلس</span></a>
                             </li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="menu-3"><span>الوزارات والدوائر الحكومية</span></a>
+                        <a class="nav-link" href="categories.html" id="menu-2"><span>رئيس مجلس الوزراء</span></a>
                     </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" id="menu-4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span>المركز الإعلامي</span><i class="fas fa-angle-down px-1"></i>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="menu-4">
-                            <li class="nav-item dropdown-item">
-                                <a class="nav-link" href="#"><span>تصريحات</span></a>
-                            </li>
-                            <li class="nav-item dropdown-item">
-                                <a class="nav-link" href="#"><span>بيانات</span></a>
-                            </li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog-grid-2.html" id="menu-3"><span>كوفيد 19</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog-grid-1.html" id="menu-4"><span>انفوجرافيك</span></a>
                     </li>
                 </ul>
             </div>
+
             <div class="dropdown" id="userProfile"> <!-- بوكس تسجيل الدخول -->
                 <a type="button" class="d-flex align-items-center" role="button" id="dropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span class="">مرحباً, محمد أحمد</span>
+                    <span class="">مرحباً, مدير الموقع</span>
                     <div class="picture-profile"><i class="fas fa-user-circle"></i></div>
                     <i class="fas fa-angle-down"></i>
                 </a>
                 <ul class="dropdown-menu py-0" aria-labelledby="dropdownUser">
-                    <li class="user-info d-flex align-items-center" href="#">
+                    <li class="user-info d-flex align-items-center">
                         <div class="picture-profile mr-2"><i class="fas fa-user-circle"></i></div>
                         <div>
-                            <div>محمد أحمد</div>
-                            <small class="text-warning">مشترك</small>
+                            <div>مدير الموقع</div>
+                            <small class="text-warning">مدير</small>
                         </div>
                     </li>
                     <li class="nav-item dropdown-item">
@@ -156,8 +139,7 @@
                         <li class="breadcrumb-item">
                             <a href="index.html"><i class="fas fa-home mr-1"></i><span>الرئيسية</span></a>
                         </li>
-                        <li class="breadcrumb-item"><a href="#">أخبار</a></li>
-                        <li class="breadcrumb-item"><a href="category.html">أخبار الرئاسة</a></li>
+                        <li class="breadcrumb-item"><a href="blog-list.html">أخبار محلية</a></li>
                         <li class="breadcrumb-item active" aria-current="page">رئيس الوزراء يوجه برفع وتيرة العمل لإنجاز محطة كهرباء عدن الجديدة</li>
                     </ul>
                 </div>
@@ -174,7 +156,7 @@
                                 <span class="post-views"><i class="far fa-eye"></i>22</span>
                                 <span class="post-comments"><i class="far fa-comment-dots"></i>3</span>
                                 <span class="post-category">
-                                    <a class="text-dark" href="category.html"><i class="fas fa-sitemap"></i>أخبار الرئاسة</a>
+                                    <a class="text-dark" href="blog-list.html"><i class="fas fa-sitemap"></i>أخبار محلية</a>
                                 </span>
                             </div>
                             <hr>
@@ -186,10 +168,8 @@
                             <!-- الصورة البارزة للمشاركة -->
                             <figure class="figure text-center">
                                 <div class="figure-img">
-                                    <div class="icon">
-                                        <span type="button"><i class="fas fa-expand"></i></span>
-                                    </div>
-                                    <img src="images/img1-1024×576.jpg" class="img-fluid rounded-top" alt="...">
+                                    <div class="icon"><span type="button"><i class="fas fa-expand"></i></span></div>
+                                    <img src="images/img1-720.jpg" class="img-fluid rounded-top" alt="...">
                                 </div>
                                 <figcaption class="figure-caption rounded-bottom">رئيس الوزراء يعقد اجتماعه مع الوزراء في عدن</figcaption>
                             </figure>
@@ -335,11 +315,11 @@
                         <section>
                             <h4><span>آخر الأخبار</span></h4>
                             <div class="list-group list-group-flush">
-                                <a class="list-group-item text-dark" href="#">ذكرى ثورة 26 سبتمبر</a>
-                                <a class="list-group-item text-dark" href="#">ذكرى ثورة 26 سبتمبر</a>
-                                <a class="list-group-item text-dark" href="#">ذكرى ثورة 26 سبتمبر</a>
-                                <a class="list-group-item text-dark" href="#">ذكرى ثورة 26 سبتمبر</a>
-                                <a class="list-group-item text-dark" href="#">ذكرى ثورة 26 سبتمبر</a>
+                                <a class="list-group-item text-dark" href="post-new.html">ذكرى ثورة 26 سبتمبر</a>
+                                <a class="list-group-item text-dark" href="post-new.html">ذكرى ثورة 26 سبتمبر</a>
+                                <a class="list-group-item text-dark" href="post-new.html">ذكرى ثورة 26 سبتمبر</a>
+                                <a class="list-group-item text-dark" href="post-new.html">ذكرى ثورة 26 سبتمبر</a>
+                                <a class="list-group-item text-dark" href="post-new.html">ذكرى ثورة 26 سبتمبر</a>
                             </div>
                             <hr class="d-block d-lg-none">
                         </section>
@@ -351,11 +331,11 @@
                                     <div id="subSlider5" class="carousel slide border rounded p-3" data-ride="carousel">
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
-                                                <a class="d-block text-center" href="#"><img src="images/slider-5.jpg" alt="..."></a>
+                                                <a class="d-block text-center" href="post.html"><img src="images/slider-5.jpg" alt="..."></a>
                                             </div>
             
                                             <div class="carousel-item">
-                                                <a class="d-block text-center" href="#"><img src="images/slider-5.jpg" alt="..."></a>
+                                                <a class="d-block text-center" href="post.html"><img src="images/slider-5.jpg" alt="..."></a>
                                             </div>
                                         </div>
                     
@@ -381,13 +361,15 @@
                             <h4><span>تواصل معنا</span></h4>
                             <form class="text-right">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="contactName" placeholder="اسمك (*)" required>
+                                    <input type="text" name="name" class="form-control" placeholder="اسمك (*)"
+                                            pattern=".{3,40}" title="يجب أن تكون القيمة من 3 إلى 40 حرف" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="contactEmail" placeholder="بريدك الإلكتروني (*)" required>
+                                    <input type="email" name="email" class="form-control" placeholder="بريدك الإلكتروني (*)"
+                                            pattern=".{0,50}" title="يجب أن تكون القيمة أقل من 50 حرف" required>
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control" id="contactMsg" rows="3" placeholder="الموضوع"></textarea>
+                                    <textarea class="form-control" name="message" rows="3" placeholder="الموضوع"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">إرسال</button>
                             </form>
@@ -397,10 +379,18 @@
             </div>
         </main>
 
-        <footer class="box-fluid">
+        <footer class="box-fluid py-2">
             <div class="container text-white text-center">
-                <span>جميع الحقوق محفوظة لرئاسة الوزراء في الجمهورية اليمنية ©</span>
+                <span>جميع الحقوق محفوظة لـ رئاسة مجلس الوزراء في الجمهورية اليمنية ©</span>
             </div>
         </footer>
+
+        <!-- JS Files -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/bootstrap.bundle-rtl.min.js"></script>
+        <script src="js/fontawesome.js" crossorigin="anonymous"></script>
+        <script src="js/lazysizes.min.js"></script>
+        <script src="js/flickity.pkgd.min.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>

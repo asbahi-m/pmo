@@ -1,32 +1,45 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html dir="rtl" lang="ar">
     <head>
-        <title>رئاسة الوزراء</title>
+        <title>رئاسة مجلس الوزراء | الجمهورية اليمنية</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- Preload -->
+        <link rel="preload" crossorigin as="image" href="images/favicon.png" type="image/png">
+        <link rel="preload" crossorigin as="image" href="images/logo-200x200.jpg" type="image/jpg">
+        <link rel="preload" crossorigin as="style" href="css/bootstrap-rtl.min.css">
+        <link rel="preload" crossorigin as="script" href="js/jquery-3.6.0.min.js">
+        <link rel="preload" crossorigin as="script" href="js/bootstrap.bundle-rtl.min.js">
+        <link rel="preload" crossorigin as="script" href="js/fontawesome.js">
+        <link rel="preload" crossorigin as="script" href="js/main.js">
+
+        <meta name="description" content="المكتب الإعلامي لرئاسة مجلس الوزراء اليمني.">
+        <meta name="thumbnail" content="images/logo-200x200.jpg">
         <link rel="icon" type="image/png" href="images/favicon.png">
 
-        <!-- CSS Files -->
-        <link rel="stylesheet" href="libraries/bootstrap/rtl/css/bootstrap.min.css">
-        <!-- <link rel="stylesheet" href="libraries/fontawesome/css/all.min.css"> -->
-        <link rel="stylesheet" href="css/flickity.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <meta name="twitter:card" content="summary_large_image">
+        <!-- <meta name="twitter:card" content="summary"> -->
+        <meta property="og:url" content="index.html">
+        <meta property="og:title" content="رئاسة مجلس الوزراء | الجمهورية اليمنية">
+        <meta property="og:description" content="المكتب الإعلامي لرئاسة مجلس الوزراء اليمني.">
+        <meta property="og:image" content="images/logo-400x400.jpg">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="ar_AR">
 
-        <!-- JS Files -->
-        <script src="js/jquery-3.4.1.min.js"></script>
-        <script src="libraries/popper/popper.min.js"></script>
-        <script src="libraries/bootstrap/rtl/js/bootstrap.bundle.min.js"></script>
-        <script src="https://kit.fontawesome.com/4e8636895c.js" crossorigin="anonymous"></script>
-        <script src="js/flickity.pkgd.js"></script>
-        <script src="js/main.js"></script>
+        <!-- CSS Files -->
+        <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
+        <!-- <link rel="stylesheet" href="css/fontawesome.min.css"> -->
+        <link rel="stylesheet" href="css/flickity.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/fonts.css">
     </head>
 
     <body>
         <header class="container d-block d-md-flex justify-content-between px-2 px-3 py-4">
-            <a class="d-flex align-items-center" href="#">
-                <img src="images/logo.png" alt="رئاسة الوزراء">
+            <a class="d-flex align-items-center" href="index.html">
+                <img src="images/logo.jpg" alt="رئاسة مجلس الوزراء">
             </a>
 
             <div class="d-flex flex-column">
@@ -45,25 +58,25 @@
                     <a href="#" target="_blank" title="RSS"><i class="fas fa-rss icon"></i></a>
                     <a href="contact-us.html" title="تواصل معنا" class="ml-auto"><i class="fas fa-mail-bulk icon mr-auto"></i></a>
                 </div>
-                <form> <!-- بوكس البحث -->
+                <form action="search.html"> <!-- بوكس البحث -->
                     <div class="input-group input-group-sm mb-2">
                         <div class="input-group-prepend">
                             <button type="submit" class="btn btn-secondary"><i class="fas fa-search"></i></button>
                         </div>
-                        <input type="search" class="form-control " placeholder="كلمات البحث" required>
+                        <input type="search" class="form-control" placeholder="كلمات البحث" required>
                     </div>
                 </form>
             </div>
         </header>
 
         <nav class="navbar navbar-expand-lg sticky-top container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="menu"> <!-- شريط القائمة الرئيسية - النافبار -->
                 <ul class="navbar-nav px-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#"><i class="fas fa-home pr-1"></i><span>الرئيسية</span></a>
+                        <a class="nav-link" href="index.html"><i class="fas fa-home pr-1"></i><span>الرئيسية</span></a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -72,65 +85,43 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="menu-1">
                             <li class="nav-item dropdown-item">
-                                <a class="nav-link" href="#"><span>اجتماعات</span></a>
+                                <a class="nav-link" href="blog-list.html"><span>اجتماعات المجلس</span></a>
                             </li>
                             <li class="nav-item dropdown-item">
-                                <a class="nav-link" href="#"><span>قرارات</span></a>
+                                <a class="nav-link" href="blog-list.html"><span>قرارات المجلس</span></a>
                             </li>
                             <li class="nav-item dropdown-item">
-                                <a class="nav-link" href="#"><span>بيانات</span></a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" id="menu-2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span>رئيس مجلس الوزراء</span><i class="fas fa-angle-down px-1"></i>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="menu-2">
-                            <li class="nav-item dropdown-item">
-                                <a class="nav-link" href="#"><span>السيرة الذاتية</span></a>
-                            </li>
-                            <li class="nav-item dropdown-item">
-                                <a class="nav-link" href="#"><span>أنشطة ولقاءات</span></a>
-                            </li>
-                            <li class="nav-item dropdown-item">
-                                <a class="nav-link" href="#"><span>حوارات ومقابلات</span></a>
+                                <a class="nav-link" href="blog-list.html"><span>بيانات المجلس</span></a>
                             </li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="menu-3"><span>الوزارات والدوائر الحكومية</span></a>
+                        <a class="nav-link" href="categories.html" id="menu-2"><span>رئيس مجلس الوزراء</span></a>
                     </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" id="menu-4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span>المركز الإعلامي</span><i class="fas fa-angle-down px-1"></i>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="menu-4">
-                            <li class="nav-item dropdown-item">
-                                <a class="nav-link" href="#"><span>تصريحات</span></a>
-                            </li>
-                            <li class="nav-item dropdown-item">
-                                <a class="nav-link" href="#"><span>بيانات</span></a>
-                            </li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog-grid-2.html" id="menu-3"><span>كوفيد 19</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog-grid-1.html" id="menu-4"><span>انفوجرافيك</span></a>
                     </li>
                 </ul>
             </div>
+
             <div class="dropdown" id="userProfile"> <!-- بوكس تسجيل الدخول -->
                 <a type="button" class="d-flex align-items-center" role="button" id="dropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span class="">مرحباً, محمد أحمد</span>
+                    <span>مرحباً, مدير الموقع</span>
                     <div class="picture-profile"><i class="fas fa-user-circle"></i></div>
                     <i class="fas fa-angle-down"></i>
                 </a>
                 <ul class="dropdown-menu py-0" aria-labelledby="dropdownUser">
-                    <li class="user-info d-flex align-items-center" href="#">
+                    <li class="user-info d-flex align-items-center">
                         <div class="picture-profile mr-2"><i class="fas fa-user-circle"></i></div>
                         <div>
-                            <div>محمد أحمد</div>
-                            <small class="text-warning">مشترك</small>
+                            <div>مدير الموقع</div>
+                            <small class="text-warning">مدير</small>
                         </div>
                     </li>
                     <li class="nav-item dropdown-item">
@@ -153,131 +144,167 @@
 
         <main>
             <div class="container">
-                <section> <!-- قسم السلايدر الرئيسي -->
+                <section> <!-- السلايدر الرئيسي -->
                     <div id="primSlider" class="carousel slide carousel-fade" data-ride="carousel">
                         <div class="carousel-inner bg-secondary">
                             <div class="carousel-item active">
                                 <div class="row mx-0">
-                                    <div class="col-lg-8 col-12 order-lg-1 p-0">
-                                        <img src="images/img1-1024×576.jpg" class="d-block w-100" alt="">
+                                    <div class="col-lg-8 col-12 order-lg-1 p-0 carousel-img">
+                                        <img class="d-block w-100 lazyload" src="images/money-720.jpg" alt="...">
                                     </div>
-                                    <div class="col-lg-4 col-12 d-flex flex-column my-auto py-lg-3">
-                                        <h5><a href="#" class="text-white font-weight-bolder">مجلس الوزراء يناقش عدداً من القضايا والمستجدات الوطنية</a></h5>
+                                    <div class="col-lg-4 col-12 d-flex flex-column my-auto py-lg-3 carousel-content">
+                                        <h5>
+                                            <a href="post-article.html" class="text-white font-weight-bolder">
+                                                مقال: العملات الرقمية بين اللامركزي والمركزي</a>
+                                        </h5>
                                         <p class="text-white d-none d-lg-block">
-                                            دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
-                                            دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
+                                            في أواخر 2017 ارتفع سعر البتكوين لأرقام خرافية. 
+                                            هذه العملة الرقمية التي لم يعرها أحد اهتماماً في السنوات
+                                            الأولى لظهورها أصبحت اهتمام الكثير من الناس، والشركات، وحتى الحكومات ...
                                         </p>
-                                        <a href="#" class="read-more ml-auto d-none d-lg-block">
+                                        <a href="post-article.html" class="read-more ml-auto d-none d-lg-block">
                                             <small class="d-flex text-white">
                                                 <span class="p-1">اقرأ المزيد</span>
                                                 <i class="fas fa-angle-down p-1 pt-2"></i>
                                             </small>
                                         </a>
+                                    </div>
+                                    <div class="post-category text-white small">
+                                        <a class="text-white" href="blog-list.html">مقالات اقتصادية</a> &nbsp;
                                     </div>
                                 </div>
                             </div>
 
                             <div class="carousel-item">
                                 <div class="row mx-0">
-                                    <div class="col-lg-8 col-12 order-lg-1 p-0">
-                                        <img src="images/img2-1024×576.jpg" class="d-block w-100" alt="">
+                                    <div class="col-lg-8 col-12 order-lg-1 p-0 carousel-img">
+                                        <img class="d-block w-100 lazyload" data-src="images/img3-720.jpg" alt="...">
                                     </div>
-                                    <div class="col-lg-4 col-12 d-flex flex-column my-auto py-lg-3">
-                                        <h5><a href="#" class="text-white font-weight-bolder">مجلس الوزراء يناقش عدداً من القضايا والمستجدات الوطنية</a></h5>
+                                    <div class="col-lg-4 col-12 d-flex flex-column my-auto py-lg-3 carousel-content">
+                                        <h5>
+                                            <a href="post-audio.html" class="text-white font-weight-bolder">
+                                                صوت: تسجيل صوتي لكلمة رئيس الوزراء</a>
+                                        </h5>
                                         <p class="text-white d-none d-lg-block">
-                                            دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
-                                            دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
+                                            تسجيل كلمة صوتية لمعالي رئيس الوزراء طرح في عدد من القضايا التي تمس المواطن ...
                                         </p>
-                                        <a href="#" class="read-more ml-auto d-none d-lg-block">
+                                        <a href="post-audio.html" class="read-more ml-auto d-none d-lg-block">
                                             <small class="d-flex text-white">
                                                 <span class="p-1">اقرأ المزيد</span>
                                                 <i class="fas fa-angle-down p-1 pt-2"></i>
                                             </small>
                                         </a>
                                     </div>
-                                </div>
-                            </div>
-                            
-                            <div class="carousel-item">
-                                <div class="row mx-0">
-                                    <div class="col-lg-8 col-12 order-lg-1 p-0">
-                                        <img src="images/img3-1024×576.jpg" class="d-block w-100" alt="">
-                                    </div>
-                                    <div class="col-lg-4 col-12 d-flex flex-column my-auto py-lg-3">
-                                        <h5><a href="#" class="text-white font-weight-bolder">مجلس الوزراء يناقش عدداً من القضايا والمستجدات الوطنية</a></h5>
-                                        <p class="text-white d-none d-lg-block">
-                                            دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
-                                            دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
-                                        </p>
-                                        <a href="#" class="read-more ml-auto d-none d-lg-block">
-                                            <small class="d-flex text-white">
-                                                <span class="p-1">اقرأ المزيد</span>
-                                                <i class="fas fa-angle-down p-1 pt-2"></i>
-                                            </small>
-                                        </a>
+                                    <div class="post-category text-white small">
+                                        <a class="text-white" href="blog-list.html">تسجيلات صوتية</a> &nbsp;
                                     </div>
                                 </div>
                             </div>
 
                             <div class="carousel-item">
                                 <div class="row mx-0">
-                                    <div class="col-lg-8 col-12 order-lg-1 p-0">
-                                        <img src="images/img4-1024×576.jpg" class="d-block w-100" alt="">
+                                    <div class="col-lg-8 col-12 order-lg-1 p-0 carousel-img">
+                                        <img class="d-block w-100 lazyload" data-src="images/img1-720.jpg" alt="...">
                                     </div>
-                                    <div class="col-lg-4 col-12 d-flex flex-column my-auto py-lg-3">
-                                        <h5><a href="#" class="text-white font-weight-bolder">مجلس الوزراء يناقش عدداً من القضايا والمستجدات الوطنية</a></h5>
+                                    <div class="col-lg-4 col-12 d-flex flex-column my-auto py-lg-3 carousel-content">
+                                        <h5>
+                                            <a href="post-gallery.html" class="text-white font-weight-bolder">
+                                                ألبوم: لقاء رئيس الوزراء بالتشكيلة الوزارية</a>
+                                        </h5>
                                         <p class="text-white d-none d-lg-block">
                                             دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
                                             دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
                                         </p>
-                                        <a href="#" class="read-more ml-auto d-none d-lg-block">
+                                        <a href="post-gallery.html" class="read-more ml-auto d-none d-lg-block">
                                             <small class="d-flex text-white">
                                                 <span class="p-1">اقرأ المزيد</span>
                                                 <i class="fas fa-angle-down p-1 pt-2"></i>
                                             </small>
                                         </a>
+                                    </div>
+                                    <div class="post-category text-white small">
+                                        <a class="text-white" href="blog-list.html">مكتبة الصور</a> &nbsp;
                                     </div>
                                 </div>
                             </div>
 
                             <div class="carousel-item">
                                 <div class="row mx-0">
-                                    <div class="col-lg-8 col-12 order-lg-1 p-0">
-                                        <img src="images/img5-1024×576.jpg" class="d-block w-100" alt="">
+                                    <div class="col-lg-8 col-12 order-lg-1 p-0 carousel-img">
+                                        <img class="d-block w-100 lazyload" data-src="images/img4-720.jpg" alt="...">
                                     </div>
-                                    <div class="col-lg-4 col-12 d-flex flex-column my-auto py-lg-3">
-                                        <h5><a href="#" class="text-white font-weight-bolder">مجلس الوزراء يناقش عدداً من القضايا والمستجدات الوطنية</a></h5>
+                                    <div class="col-lg-4 col-12 d-flex flex-column my-auto py-lg-3 carousel-content">
+                                        <h5>
+                                            <a href="post-new.html" class="text-white font-weight-bolder">
+                                                خبر: رئيس الوزراء يوجه برفع وتيرة العمل لإنجاز محطة كهرباء عدن الجديدة</a>
+                                        </h5>
                                         <p class="text-white d-none d-lg-block">
-                                            دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
-                                            دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
+                                            وجه رئيس مجلس الوزراء الدكتور معين عبد الملك، 
+                                            وتيرة العمل في انجاز تنفيذ المرحلة الأولى من مشروع محطة كهرباء عدن الجديدة ...
                                         </p>
-                                        <a href="#" class="read-more ml-auto d-none d-lg-block">
+                                        <a href="post-new.html" class="read-more ml-auto d-none d-lg-block">
                                             <small class="d-flex text-white">
                                                 <span class="p-1">اقرأ المزيد</span>
                                                 <i class="fas fa-angle-down p-1 pt-2"></i>
                                             </small>
                                         </a>
+                                    </div>
+                                    <div class="post-category text-white small">
+                                        <a class="text-white" href="blog-list.html">أخبار محلية</a> &nbsp;
                                     </div>
                                 </div>
                             </div>
 
                             <div class="carousel-item">
                                 <div class="row mx-0">
-                                    <div class="col-lg-8 col-12 order-lg-1 p-0">
-                                        <img src="images/img6-1024×576.jpg" class="d-block w-100" alt="">
+                                    <div class="col-lg-8 col-12 order-lg-1 p-0 carousel-img">
+                                        <img class="d-block w-100 lazyload" data-src="images/video-720.jpg" alt="...">
                                     </div>
-                                    <div class="col-lg-4 col-12 d-flex flex-column my-auto py-lg-3">
-                                        <h5><a href="#" class="text-white font-weight-bolder">مجلس الوزراء يناقش عدداً من القضايا والمستجدات الوطنية</a></h5>
+                                    <div class="col-lg-4 col-12 d-flex flex-column my-auto py-lg-3 carousel-content">
+                                        <h5>
+                                            <a href="post-video.html" class="text-white font-weight-bolder">
+                                                فيديو: تعريف برئيس الوزراء معين عبدالملك</a>
+                                        </h5>
                                         <p class="text-white d-none d-lg-block">
-                                            دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
-                                            دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
+                                            فيديو تعريفي برئيس الوزراء د. معين عبدالملك .. 
+                                            فيديو تعريفي برئيس الوزراء د. معين عبدالملك .. 
                                         </p>
-                                        <a href="#" class="read-more ml-auto d-none d-lg-block">
+                                        <a href="post-video.html" class="read-more ml-auto d-none d-lg-block">
                                             <small class="d-flex text-white">
                                                 <span class="p-1">اقرأ المزيد</span>
                                                 <i class="fas fa-angle-down p-1 pt-2"></i>
                                             </small>
                                         </a>
+                                    </div>
+                                    <div class="post-category text-white small">
+                                        <a class="text-white" href="blog-list.html">فيديوهات</a> &nbsp;
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="row mx-0">
+                                    <div class="col-lg-8 col-12 order-lg-1 p-0 carousel-img">
+                                        <img class="d-block w-100 lazyload" data-src="images/img6-720.jpg" alt="...">
+                                    </div>
+                                    <div class="col-lg-4 col-12 d-flex flex-column my-auto py-lg-3 carousel-content">
+                                        <h5>
+                                            <a href="post.html" class="text-white font-weight-bolder">
+                                                مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</a>
+                                        </h5>
+                                        <p class="text-white d-none d-lg-block">
+                                            عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن
+                                            عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن
+                                        </p>
+                                        <a href="post.html" class="read-more ml-auto d-none d-lg-block">
+                                            <small class="d-flex text-white">
+                                                <span class="p-1">اقرأ المزيد</span>
+                                                <i class="fas fa-angle-down p-1 pt-2"></i>
+                                            </small>
+                                        </a>
+                                    </div>
+                                    <div class="post-category text-white small">
+                                        <a class="text-white" href="blog-list.html">اجتماعات المجلس</a> &nbsp;
                                     </div>
                                 </div>
                             </div>
@@ -285,12 +312,24 @@
 
                         <div class="container position-relative">
                             <ol class="carousel-indicators d-flex justify-content-between">
-                                <li class="mx-1 mx-lg-2 active" data-target="#primSlider" data-slide-to="0" style="background-image: url('images/img1-1024×576.jpg')"></li>
-                                <li class="mx-1 mx-lg-2" data-target="#primSlider" data-slide-to="1" style="background-image: url('images/img2-1024×576.jpg')"></li>
-                                <li class="mx-1 mx-lg-2" data-target="#primSlider" data-slide-to="2" style="background-image: url('images/img3-1024×576.jpg')"></li>
-                                <li class="mx-1 mx-lg-2" data-target="#primSlider" data-slide-to="3" style="background-image: url('images/img4-1024×576.jpg')"></li>
-                                <li class="mx-1 mx-lg-2" data-target="#primSlider" data-slide-to="4" style="background-image: url('images/img5-1024×576.jpg')"></li>
-                                <li class="mx-1 mx-lg-2" data-target="#primSlider" data-slide-to="5" style="background-image: url('images/img6-1024×576.jpg')"></li>
+                                <li class="mx-1 mx-lg-2 active" data-target="#primSlider" data-slide-to="0">
+                                    <img class="w-100 lazyload" data-src="images/money-720.jpg" alt="...">
+                                </li>
+                                <li class="mx-1 mx-lg-2" data-target="#primSlider" data-slide-to="1">
+                                    <img class="w-100 lazyload" data-src="images/img3-720.jpg" alt="...">
+                                </li>
+                                <li class="mx-1 mx-lg-2" data-target="#primSlider" data-slide-to="2">
+                                    <img class="w-100 lazyload" data-src="images/img1-720.jpg" alt="...">
+                                </li>
+                                <li class="mx-1 mx-lg-2" data-target="#primSlider" data-slide-to="3">
+                                    <img class="w-100 lazyload" data-src="images/img4-720.jpg" alt="...">
+                                </li>
+                                <li class="mx-1 mx-lg-2" data-target="#primSlider" data-slide-to="4">
+                                    <img class="w-100 lazyload" data-src="images/video-720.jpg" alt="...">
+                                </li>
+                                <li class="mx-1 mx-lg-2" data-target="#primSlider" data-slide-to="5">
+                                    <img class="w-100 lazyload" data-src="images/img6-720.jpg" alt="...">
+                                </li>
                             </ol>
                             
                             <a class="carousel-control-prev" href="#primSlider" role="button" data-slide="prev">
@@ -303,145 +342,133 @@
                     </div>
                 </section>
             
-                <section> <!-- قسم سلايدر الأخبار -->
-                    <h4><a href="category.html"><span>الأخبار</span></a></h4>
-                    <div id="subSlider1" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#subSlider1" data-slide-to="0" class="active"></li>
-                            <li data-target="#subSlider1" data-slide-to="1"></li>
-                        </ol>
-    
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="row">
-                                    <div class="col-lg-4 py-3 d-flex">
-                                        <div class="card">
-                                            <div class="cardImg" style="background-image: url('images/img1-1024×576.jpg')">
-                                                <span type="button" class="icon"><i class="far fa-image"></i></span>
-                                            </div>
-                                            <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title custom-height"><span>مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</span></h5>
-                                                <p class="card-text">عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن</p>
-                                                <a href="#" class="read-more ml-auto">
-                                                    <small class="d-flex text-white">
-                                                        <span class="p-1">اقرأ المزيد</span>
-                                                        <i class="fas fa-angle-down p-1 pt-2"></i>
-                                                    </small>
-                                                </a>
-                                            </div>
-                                        </div>
+                <section class="animate"> <!-- قسم الأخبار -->
+                    <h4><a href="blog-list.html"><span>الأخبار</span></a></h4>
+                    <div class="news">
+                        <div class="carousel" data-flickity='{ "lazyLoad": true, "imagesLoaded": true, "groupCells": true,
+                                            "autoPlay": 20000, "contain": true, "wrapAround": false, "rightToLeft": true, "cellAlign": true }'>
+                            <div class="carousel-cell p-3 d-flex">
+                                <div class="card">
+                                    <div class="cardImg">
+                                        <img class="carousel-cell-image w-100 lazyload" data-src="images/img1-720.jpg" alt="...">
+                                        <span type="button" class="icon"><i class="far fa-image"></i></span>
                                     </div>
-    
-                                    <div class="col-lg-4 py-3 d-flex">
-                                        <div class="card">
-                                            <div class="cardImg" style="background-image: url('images/img2-1024×576.jpg')">
-                                                <span type="button" class="icon"><i class="far fa-image"></i></span>
-                                            </div>
-                                            <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title custom-height"><span>مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</span></h5>
-                                                <p class="card-text">عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن</p>
-                                                <a href="#" class="read-more ml-auto">
-                                                    <small class="d-flex text-white">
-                                                        <span class="p-1">اقرأ المزيد</span>
-                                                        <i class="fas fa-angle-down p-1 pt-2"></i>
-                                                    </small>
-                                                </a>
-                                            </div>
-                                        </div>
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title custom-height"><a href="post-new.html">مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</a></h5>
+                                        <p class="card-text">عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن</p>
+                                        <a href="post-new.html" class="read-more ml-auto mt-auto">
+                                            <small class="d-flex text-white">
+                                                <span class="p-1">اقرأ المزيد</span>
+                                                <i class="fas fa-angle-down p-1 pt-2"></i>
+                                            </small>
+                                        </a>
                                     </div>
-    
-                                    <div class="col-lg-4 py-3 d-flex">
-                                        <div class="card">
-                                            <div class="cardImg" style="background-image: url('images/img3-1024×576.jpg')">
-                                                <span type="button" class="icon"><i class="far fa-image"></i></span>
-                                            </div>
-                                            <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title custom-height"><span>مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</span></h5>
-                                                <p class="card-text">عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن</p>
-                                                <a href="#" class="read-more ml-auto">
-                                                    <small class="d-flex text-white">
-                                                        <span class="p-1">اقرأ المزيد</span>
-                                                        <i class="fas fa-angle-down p-1 pt-2"></i>
-                                                    </small>
-                                                </a>
-                                            </div>
-                                        </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-cell p-3 d-flex">
+                                <div class="card">
+                                    <div class="cardImg">
+                                        <img class="carousel-cell-image w-100 lazyload" data-src="images/img2-720.jpg" alt="...">
+                                        <span type="button" class="icon"><i class="far fa-image"></i></span>
+                                    </div>
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title custom-height"><a href="post-new.html">مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</a></h5>
+                                        <p class="card-text">عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن</p>
+                                        <a href="post-new.html" class="read-more ml-auto mt-auto">
+                                            <small class="d-flex text-white">
+                                                <span class="p-1">اقرأ المزيد</span>
+                                                <i class="fas fa-angle-down p-1 pt-2"></i>
+                                            </small>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-cell p-3 d-flex">
+                                <div class="card">
+                                    <div class="cardImg">
+                                        <img class="carousel-cell-image w-100 lazyload" data-src="images/img3-720.jpg" alt="...">
+                                        <span type="button" class="icon"><i class="far fa-image"></i></span>
+                                    </div>
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title custom-height"><a href="post-new.html">مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</a></h5>
+                                        <p class="card-text">عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن</p>
+                                        <a href="post-new.html" class="read-more ml-auto mt-auto">
+                                            <small class="d-flex text-white">
+                                                <span class="p-1">اقرأ المزيد</span>
+                                                <i class="fas fa-angle-down p-1 pt-2"></i>
+                                            </small>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
     
-                            <div class="carousel-item">
-                                <div class="row">
-                                    <div class="col-lg-4 py-3 d-flex">
-                                        <div class="card =">
-                                            <div class="cardImg" style="background-image: url('images/img4-1024×576.jpg')">
-                                                <span type="button" class="icon"><i class="far fa-image"></i></span>
-                                            </div>
-                                            <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title custom-height"><span>مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</span></h5>
-                                                <p class="card-text">عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن</p>
-                                                <a href="#" class="read-more ml-auto">
-                                                    <small class="d-flex text-white">
-                                                        <span class="p-1">اقرأ المزيد</span>
-                                                        <i class="fas fa-angle-down p-1 pt-2"></i>
-                                                    </small>
-                                                </a>
-                                            </div>
-                                        </div>
+                            <div class="carousel-cell p-3 d-flex">
+                                <div class="card =">
+                                    <div class="cardImg">
+                                        <img class="carousel-cell-image w-100 lazyload" data-src="images/img4-720.jpg" alt="...">
+                                        <span type="button" class="icon"><i class="far fa-image"></i></span>
                                     </div>
-    
-                                    <div class="col-lg-4 py-3 d-flex">
-                                        <div class="card =">
-                                            <div class="cardImg" style="background-image: url('images/img5-1024×576.jpg')">
-                                                <span type="button" class="icon"><i class="far fa-image"></i></span>
-                                            </div>
-                                            <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title custom-height"><span>مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</span></h5>
-                                                <p class="card-text">عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن</p>
-                                                <a href="#" class="read-more ml-auto">
-                                                    <small class="d-flex text-white">
-                                                        <span class="p-1">اقرأ المزيد</span>
-                                                        <i class="fas fa-angle-down p-1 pt-2"></i>
-                                                    </small>
-                                                </a>
-                                            </div>
-                                        </div>
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title custom-height"><a href="post-new.html">مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</a></h5>
+                                        <p class="card-text">عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن</p>
+                                        <a href="post-new.html" class="read-more ml-auto mt-auto">
+                                            <small class="d-flex text-white">
+                                                <span class="p-1">اقرأ المزيد</span>
+                                                <i class="fas fa-angle-down p-1 pt-2"></i>
+                                            </small>
+                                        </a>
                                     </div>
-    
-                                    <div class="col-lg-4 py-3 d-flex">
-                                        <div class="card =">
-                                            <div class="cardImg" style="background-image: url('images/img6-1024×576.jpg')">
-                                                <span type="button" class="icon"><i class="far fa-image"></i></span>
-                                            </div>
-                                            <div class="card-body d-flex flex-column">
-                                                <h5 class="card-title custom-height"><span>مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</span></h5>
-                                                <p class="card-text">عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن</p>
-                                                <a href="#" class="read-more ml-auto">
-                                                    <small class="d-flex text-white">
-                                                        <span class="p-1">اقرأ المزيد</span>
-                                                        <i class="fas fa-angle-down p-1 pt-2"></i>
-                                                    </small>
-                                                </a>
-                                            </div>
-                                        </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-cell p-3 d-flex">
+                                <div class="card =">
+                                    <div class="cardImg">
+                                        <img class="carousel-cell-image w-100 lazyload" data-src="images/img5-720.jpg" alt="...">
+                                        <span type="button" class="icon"><i class="far fa-image"></i></span>
+                                    </div>
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title custom-height"><a href="post-new.html">مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</a></h5>
+                                        <p class="card-text">عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن</p>
+                                        <a href="post-new.html" class="read-more ml-auto mt-auto">
+                                            <small class="d-flex text-white">
+                                                <span class="p-1">اقرأ المزيد</span>
+                                                <i class="fas fa-angle-down p-1 pt-2"></i>
+                                            </small>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-cell p-3 d-flex">
+                                <div class="card =">
+                                    <div class="cardImg">
+                                        <img class="carousel-cell-image w-100 lazyload" data-src="images/img6-720.jpg" alt="...">
+                                        <span type="button" class="icon"><i class="far fa-image"></i></span>
+                                    </div>
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title custom-height"><a href="post-new.html">مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</a></h5>
+                                        <p class="card-text">عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن</p>
+                                        <a href="post-new.html" class="read-more ml-auto mt-auto">
+                                            <small class="d-flex text-white">
+                                                <span class="p-1">اقرأ المزيد</span>
+                                                <i class="fas fa-angle-down p-1 pt-2"></i>
+                                            </small>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-    
-                        <a class="carousel-control-prev" href="#subSlider1" role="button" data-slide="prev">
-                            <span class="fas fa-chevron-right" aria-hidden="true"></span>
-                        </a>
-                        <a class="carousel-control-next" href="#subSlider1" role="button" data-slide="next">
-                            <span class="fas fa-chevron-left" aria-hidden="true"></span>
-                        </a>
                     </div>
                 </section>
 
-                <section> <!-- قسم سلايدر جلسات وقرارات مجلس الوزراء -->
+                <section>
                     <div class="row">
-                        <div class="col-lg-6">
-                            <h4><a href="category.html"><span>جلسات</span></a></h4>
+                        <!-- جلسات مجلس الوزراء -->
+                        <div class="col-lg-6 animate">
+                            <h4><a href="blog-list.html"><span>جلسات</span></a></h4>
                             <div id="subSlider2" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
                                     <li data-target="#subSlider2" data-slide-to="0" class="active"></li>
@@ -450,13 +477,13 @@
             
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <a class="d-flex p-3 align-items-center" href="#">
+                                        <a class="d-flex p-3 align-items-center" href="post-new.html">
                                             <div class="d-flex flex-column text-nowrap px-3 text-center">
                                                 <strong class="display-4">10</strong><span>مايو 2019</span>
                                             </div>
                                             <h5 class="pl-3 custom-height"><span>دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس</span></h5>
                                         </a>
-                                        <a class="d-flex p-3 align-items-center" href="#">
+                                        <a class="d-flex p-3 align-items-center" href="post-new.html">
                                             <div class="d-flex flex-column text-nowrap px-3 text-center">
                                                 <strong class="display-4">15</strong><span>يناير 2019</span>
                                             </div>
@@ -465,13 +492,13 @@
                                     </div>
 
                                     <div class="carousel-item">
-                                        <a class="d-flex p-3 align-items-center" href="#">
+                                        <a class="d-flex p-3 align-items-center" href="post-new.html">
                                             <div class="d-flex flex-column text-nowrap px-3 text-center">
                                                 <strong class="display-4">20</strong><span>مايو 2019</span>
                                             </div>
                                             <h5 class="pl-3 custom-height"><span>دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس</span></h5>
                                         </a>
-                                        <a class="d-flex p-3 align-items-center" href="#">
+                                        <a class="d-flex p-3 align-items-center" href="post-new.html">
                                             <div class="d-flex flex-column text-nowrap px-3 text-center">
                                                 <strong class="display-4">25</strong><span>مايو 2019</span>
                                             </div>
@@ -482,8 +509,9 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6">
-                            <h4><a href="category.html"><span>قرارات</span></a></h4>
+                        <!-- قرارات مجلس الوزراء -->
+                        <div class="col-lg-6 animate">
+                            <h4><a href="blog-list.html"><span>قرارات</span></a></h4>
                             <div id="subSlider3" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
                                     <li data-target="#subSlider3" data-slide-to="0" class="active"></li>
@@ -492,13 +520,13 @@
             
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <a class="d-flex p-3 align-items-center" href="#">
+                                        <a class="d-flex p-3 align-items-center" href="post-new.html">
                                             <div class="d-flex flex-column text-nowrap px-3 text-center">
                                                 <strong class="display-4">15</strong><span>مايو 2019</span>
                                             </div>
                                             <h5 class="pl-3 custom-height"><span>دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس</span></h5>
                                         </a>
-                                        <a class="d-flex p-3 align-items-center" href="#">
+                                        <a class="d-flex p-3 align-items-center" href="post-new.html">
                                             <div class="d-flex flex-column text-nowrap px-3 text-center">
                                                 <strong class="display-4">20</strong><span>مايو 2019</span>
                                             </div>
@@ -507,13 +535,13 @@
                                     </div>
 
                                     <div class="carousel-item">
-                                        <a class="d-flex p-3 align-items-center" href="#">
+                                        <a class="d-flex p-3 align-items-center" href="post-new.html">
                                             <div class="d-flex flex-column text-nowrap px-3 text-center">
                                                 <strong class="display-4">25</strong><span>مايو 2019</span>
                                             </div>
                                             <h5 class="pl-3 custom-height"><span>دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس</span></h5>
                                         </a>
-                                        <a class="d-flex p-3 align-items-center" href="#">
+                                        <a class="d-flex p-3 align-items-center" href="post-new.html">
                                             <div class="d-flex flex-column text-nowrap px-3 text-center">
                                                 <strong class="display-4">30</strong><span>مايو 2019</span>
                                             </div>
@@ -526,8 +554,8 @@
                     </div>
                 </section>
 
-                <section> <!-- قسم سلايدر بيانات مجلس الوزراء -->
-                    <h4><a href="category.html"><span>بيانات</span></a></h4>
+                <section class="animate"> <!-- بيانات مجلس الوزراء -->
+                    <h4><a href="blog-list.html"><span>بيانات</span></a></h4>
                     <div id="subSlider4" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
                             <li data-target="#subSlider4" data-slide-to="0" class="active"></li>
@@ -543,7 +571,7 @@
                                                 <strong class="display-4 bg-primary px-2">10</strong>
                                                 <span class="bg-secondary px-2">أكتوبر 2019</span>
                                             </div>
-                                            <h5 class="pl-3 custom-height"><a class="text-dark" href="#">بيان مجلس الوزراء بخصوص الأحداث الأخيرة في عدن</a></h5>
+                                            <h5 class="pl-3 custom-height"><a class="text-dark" href="post-new.html">بيان مجلس الوزراء بخصوص الأحداث الأخيرة في عدن</a></h5>
                                         </div>
                                     </div>
 
@@ -553,7 +581,7 @@
                                                 <strong class="display-4 bg-primary px-2">20</strong>
                                                 <span class="bg-secondary px-2">أكتوبر 2019</span>
                                             </div>
-                                            <h5 class="pl-3 custom-height"><a class="text-dark" href="#">بيان مجلس الوزراء بخصوص الأحداث الأخيرة في عدن</a></h5>
+                                            <h5 class="pl-3 custom-height"><a class="text-dark" href="post-new.html">بيان مجلس الوزراء بخصوص الأحداث الأخيرة في عدن</a></h5>
                                         </div>
                                     </div>
 
@@ -563,7 +591,7 @@
                                                 <strong class="display-4 bg-primary px-2">30</strong>
                                                 <span class="bg-secondary px-2">أكتوبر 2019</span>
                                             </div>
-                                            <h5 class="pl-3 custom-height"><a class="text-dark" href="#">بيان مجلس الوزراء بخصوص الأحداث الأخيرة في عدن</a></h5>
+                                            <h5 class="pl-3 custom-height"><a class="text-dark" href="post-new.html">بيان مجلس الوزراء بخصوص الأحداث الأخيرة في عدن</a></h5>
                                         </div>
                                     </div>
                                 </div>
@@ -577,7 +605,7 @@
                                                 <strong class="display-4 bg-primary px-2">10</strong>
                                                 <span class="bg-secondary px-2">نوفمبر 2019</span>
                                             </div>
-                                            <h5 class="pl-3 custom-height"><a class="text-dark" href="#">بيان مجلس الوزراء بخصوص الأحداث الأخيرة في عدن</a></h5>
+                                            <h5 class="pl-3 custom-height"><a class="text-dark" href="post-new.html">بيان مجلس الوزراء بخصوص الأحداث الأخيرة في عدن</a></h5>
                                         </div>
                                     </div>
 
@@ -587,7 +615,7 @@
                                                 <strong class="display-4 bg-primary px-2">20</strong>
                                                 <span class="bg-secondary px-2">نوفمبر 2019</span>
                                             </div>
-                                            <h5 class="pl-3 custom-height"><a class="text-dark" href="#">بيان مجلس الوزراء بخصوص الأحداث الأخيرة في عدن</a></h5>
+                                            <h5 class="pl-3 custom-height"><a class="text-dark" href="post-new.html">بيان مجلس الوزراء بخصوص الأحداث الأخيرة في عدن</a></h5>
                                         </div>
                                     </div>
 
@@ -597,7 +625,7 @@
                                                 <strong class="display-4 bg-primary px-2">30</strong>
                                                 <span class="bg-secondary px-2">نوفمبر 2019</span>
                                             </div>
-                                            <h5 class="pl-3 custom-height"><a class="text-dark" href="#">بيان مجلس الوزراء بخصوص الأحداث الأخيرة في عدن</a></h5>
+                                            <h5 class="pl-3 custom-height"><a class="text-dark" href="post-new.html">بيان مجلس الوزراء بخصوص الأحداث الأخيرة في عدن</a></h5>
                                         </div>
                                     </div>
                                 </div>
@@ -606,40 +634,48 @@
                     </div>
                 </section>
 
-                <section> <!-- قسم تبويبات الكلمات واللقاءات وسلايدر المناسبات الرسمية -->
+                <section>
                     <div class="row">
-                        <div class="col-lg-9">
-                            <h4><a href="category.html"><span>الكلمات واللقاءات</span></a></h4>
+                        <!-- أنشطة ولقاءات -->
+                        <div class="col-lg-9 col-12 animate">
+                            <h4><a href="blog-list.html"><span>لقاءات</span></a></h4>
                             <div class="row">
                                 <div class="col-12 col-md-7 order-1">
                                     <div class="nav flex-column nav-pills" id="tabsPrime" role="tablist" aria-orientation="vertical">
                                         <a class="nav-link active" id="tabsPrime-1" data-toggle="pill" href="#tabsPrimeContent-1" role="tab" aria-controls="tabsPrimeContent-1" aria-selected="true">
                                             <i class="fas fa-caret-left"></i>
-                                            <h6 class="custom-height"><span>رئيس الوزراء يترأس لقاءً يمنياً أمريكياً لتعزيز التعاون بين البلدين</span></h6>
-                                            <small class="d-none d-xl-block">دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
+                                            <div class="custom-height"><span>رئيس الوزراء يترأس لقاءً يمنياً أمريكياً لتعزيز التعاون بين البلدين</span></div>
+                                            <!-- <small class="d-none d-xl-block">دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
                                                 دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
-                                            </small>
+                                            </small> -->
                                         </a>
                                         <a class="nav-link" id="tabsPrime-2" data-toggle="pill" href="#tabsPrimeContent-2" role="tab" aria-controls="tabsPrimeContent-2" aria-selected="false">
                                             <i class="fas fa-caret-left"></i>
-                                            <h6 class="custom-height"><span>رئيس الوزراء يترأس لقاءً يمنياً أمريكياً لتعزيز التعاون بين البلدين</span></h6>
-                                            <small class="d-none d-xl-block">دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
+                                            <div class="custom-height"><span>رئيس الوزراء يترأس لقاءً يمنياً أمريكياً لتعزيز التعاون بين البلدين</span></div>
+                                            <!-- <small class="d-none d-xl-block">دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
                                                 دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
-                                            </small>
+                                            </small> -->
                                         </a>
                                         <a class="nav-link" id="tabsPrime-3" data-toggle="pill" href="#tabsPrimeContent-3" role="tab" aria-controls="tabsPrimeContent-3" aria-selected="false">
                                             <i class="fas fa-caret-left"></i>
-                                            <h6 class="custom-height"><span>رئيس الوزراء يترأس لقاءً يمنياً أمريكياً لتعزيز التعاون بين البلدين</span></h6>
-                                            <small class="d-none d-xl-block">دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
+                                            <div class="custom-height"><span>رئيس الوزراء يترأس لقاءً يمنياً أمريكياً لتعزيز التعاون بين البلدين</span></div>
+                                            <!-- <small class="d-none d-xl-block">دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
                                                 دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
-                                            </small>
+                                            </small> -->
                                         </a>
                                         <a class="nav-link" id="tabsPrime-4" data-toggle="pill" href="#tabsPrimeContent-4" role="tab" aria-controls="tabsPrimeContent-4" aria-selected="false">
                                             <i class="fas fa-caret-left"></i>
-                                            <h6 class="custom-height"><span>رئيس الوزراء يترأس لقاءً يمنياً أمريكياً لتعزيز التعاون بين البلدين</span></h6>
-                                            <small class="d-none d-xl-block">دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
+                                            <div class="custom-height"><span>رئيس الوزراء يترأس لقاءً يمنياً أمريكياً لتعزيز التعاون بين البلدين</span></div>
+                                            <!-- <small class="d-none d-xl-block">دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
                                                 دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
-                                            </small>
+                                            </small> -->
+                                        </a>
+                                        <a class="nav-link" id="tabsPrime-5" data-toggle="pill" href="#tabsPrimeContent-5" role="tab" aria-controls="tabsPrimeContent-5" aria-selected="false">
+                                            <i class="fas fa-caret-left"></i>
+                                            <div class="custom-height"><span>رئيس الوزراء يترأس لقاءً يمنياً أمريكياً لتعزيز التعاون بين البلدين</span></div>
+                                            <!-- <small class="d-none d-xl-block">دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
+                                                دولة رئيس الوزراء الدكتور معين عبدالملك يترأس جلسة دورية للمجلس .. 
+                                            </small> -->
                                         </a>
                                     </div>
                                 </div>
@@ -648,33 +684,41 @@
                                     <div class="tab-content" id="tabsPrimeContent">
                                         <div class="tab-pane fade show active" id="tabsPrimeContent-1" role="tabpanel" aria-labelledby="tabsPrime-1">
                                             <figure class="figure">
-                                                <img src="images/img1-1024×576.jpg" class="figure-img img-fluid rounded" alt="...">
+                                                <img class="figure-img img-fluid rounded lazyload" data-src="images/img1-720.jpg" alt="...">
                                                 <figcaption class="figure-caption">
-                                                    <h5 class="text-center custom-height"><a href="#" class="text-dark">رئيس الوزراء يترأس لقاءً يمنياً أمريكياً لتعزيز التعاون بين البلدين الصديقين</a></h5>
+                                                    <h5 class="text-center custom-height"><a href="post-new.html" class="text-dark">رئيس الوزراء يترأس لقاءً يمنياً أمريكياً لتعزيز التعاون بين البلدين الصديقين</a></h5>
                                                 </figcaption>
                                             </figure>
                                         </div>
                                         <div class="tab-pane fade" id="tabsPrimeContent-2" role="tabpanel" aria-labelledby="tabsPrime-2">
                                             <figure class="figure">
-                                                <img src="images/img2-1024×576.jpg" class="figure-img img-fluid rounded" alt="...">
+                                                <img class="figure-img img-fluid rounded lazyload" data-src="images/img2-720.jpg" alt="...">
                                                 <figcaption class="figure-caption">
-                                                    <h5 class="text-center custom-height"><a href="#" class="text-dark">رئيس الوزراء يترأس لقاءً يمنياً أمريكياً لتعزيز التعاون بين البلدين الصديقين</a></h5>
+                                                    <h5 class="text-center custom-height"><a href="post-new.html" class="text-dark">رئيس الوزراء يترأس لقاءً يمنياً أمريكياً لتعزيز التعاون بين البلدين الصديقين</a></h5>
                                                 </figcaption>
                                             </figure>
                                         </div>
                                         <div class="tab-pane fade" id="tabsPrimeContent-3" role="tabpanel" aria-labelledby="tabsPrime-3">
                                             <figure class="figure">
-                                                <img src="images/img3-1024×576.jpg" class="figure-img img-fluid rounded" alt="...">
+                                                <img class="figure-img img-fluid rounded lazyload" data-src="images/img3-720.jpg" alt="...">
                                                 <figcaption class="figure-caption">
-                                                    <h5 class="text-center custom-height"><a href="#" class="text-dark">رئيس الوزراء يترأس لقاءً يمنياً أمريكياً لتعزيز التعاون بين البلدين الصديقين</a></h5>
+                                                    <h5 class="text-center custom-height"><a href="post-new.html" class="text-dark">رئيس الوزراء يترأس لقاءً يمنياً أمريكياً لتعزيز التعاون بين البلدين الصديقين</a></h5>
                                                 </figcaption>
                                             </figure>
                                         </div>
                                         <div class="tab-pane fade" id="tabsPrimeContent-4" role="tabpanel" aria-labelledby="tabsPrime-4">
                                             <figure class="figure">
-                                                <img src="images/img4-1024×576.jpg" class="figure-img img-fluid rounded" alt="...">
+                                                <img class="figure-img img-fluid rounded lazyload" data-src="images/img4-720.jpg" alt="...">
                                                 <figcaption class="figure-caption">
-                                                    <h5 class="text-center custom-height"><a href="#" class="text-dark">رئيس الوزراء يترأس لقاءً يمنياً أمريكياً لتعزيز التعاون بين البلدين الصديقين</a></h5>
+                                                    <h5 class="text-center custom-height"><a href="post-new.html" class="text-dark">رئيس الوزراء يترأس لقاءً يمنياً أمريكياً لتعزيز التعاون بين البلدين الصديقين</a></h5>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="tab-pane fade" id="tabsPrimeContent-5" role="tabpanel" aria-labelledby="tabsPrime-5">
+                                            <figure class="figure">
+                                                <img class="figure-img img-fluid rounded lazyload" data-src="images/img5-720.jpg" alt="...">
+                                                <figcaption class="figure-caption">
+                                                    <h5 class="text-center custom-height"><a href="post-new.html" class="text-dark">رئيس الوزراء يترأس لقاءً يمنياً أمريكياً لتعزيز التعاون بين البلدين الصديقين</a></h5>
                                                 </figcaption>
                                             </figure>
                                         </div>
@@ -683,18 +727,19 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-3">
-                            <h4><a href="#"><span>المناسبات الرسمية</span></a></h4>
+                        <!-- المناسبات الرسمية -->
+                        <div class="col-lg-3 col-12 animate">
+                            <h4><a href="blog-list.html"><span>المناسبات الرسمية</span></a></h4>
                             <div class="row official">
                                 <div class="col-12 col-sm-6 col-lg-12">
                                     <div id="subSlider5" class="carousel slide border rounded p-3" data-ride="carousel">
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
-                                                <a class="d-block text-center" href="#"><img src="images/slider-5.jpg" alt="..."></a>
+                                                <a class="d-block text-center" href="#"><img class="lazyload" data-src="images/slider-5.jpg" alt="..."></a>
                                             </div>
             
                                             <div class="carousel-item">
-                                                <a class="d-block text-center" href="#"><img src="images/slider-5.jpg" alt="..."></a>
+                                                <a class="d-block text-center" href="#"><img class="lazyload" data-src="images/slider-5.jpg" alt="..."></a>
                                             </div>
                                         </div>
                     
@@ -710,7 +755,7 @@
 
                                 <div class="col-12 col-sm-6 col-lg-12">
                                     <div class="border rounded text-center p-3">
-                                        <a href="#"><img src="images/slider-6.jpg" alt="..."></a>
+                                        <a href="#"><img class="lazyload" data-src="images/slider-6.jpg" alt="..."></a>
                                     </div>
                                 </div>
                             </div>
@@ -720,104 +765,89 @@
             </div>
 
             <div class="box-fluid bg-light">
-                <section class="container"> <!-- قسم بوكس ملفات خاصة -->
-                    <div><a href="#"><img class="w-100" src="images/COVID-19.jpg"></a></div>
-                    
-                    <!-- <h4><span>ملفات خاصة</span></h4>
-                    <div class="row">
-                        <div class="col-lg-4 py-3">
-                            <div class="card">
-                                <div class="cardImg">
-                                    <a type="button"><i class="far fa-image icon"></i></a>
-                                    <img src="images/img1-1024×576.jpg" alt="...">
-                                </div>
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title custom-height"><a href="#">مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</a></h5>
-                                    <p class="card-text">عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 py-3">
-                            <div class="card">
-                                <div class="cardImg">
-                                    <a type="button"><i class="far fa-image icon"></i></a>
-                                    <img src="images/img2-1024×576.jpg" alt="...">
-                                </div>
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title custom-height"><a href="#">مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</a></h5>
-                                    <p class="card-text">عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 py-3">
-                            <div class="card">
-                                <div class="cardImg">
-                                    <a type="button"><i class="far fa-image icon"></i></a>
-                                    <img src="images/img3-1024×576.jpg" alt="...">
-                                </div>
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title custom-height"><a href="#">مجلس الوزراء يعقد الاجتماع الدوري في العاصمة المؤقتة</a></h5>
-                                    <p class="card-text">عقد مجلس الوزراء إجتماعاً اليوم الاثنين برئاسة الدكتور معين عبدالملك في العاصمة المؤقتة عدن</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-center mt-3">
-                        <a href="category.html" class="text-white"><span>المزيد</span><i class="fas fa-angle-down"></i></a>
-                    </div> -->
-                </section>
+                <div class="container animate"> <!-- قسم ملفات خاصة -->
+                    <a href="blog-grid-2.html"><img class="w-100 lazyload" data-src="images/COVID-19.jpg" alt="COVID-19"></a>
+                </div>
             </div>
             
             <div class="container">
-                <section> <!-- قسم سلايدر الفديو والإنفوجرافيك -->
+                <section>
                     <div class="row">
-                        <div class="col-lg-6">
-                            <h4><span>الفيديو</span></h4>
+                        <!-- قسم الفيديوهات -->
+                        <div class="col-lg-6 animate">
+                            <h4><a href="blog-list.html"><span>فيديوهات</span></a></h4>
                             <div id="videoSlider" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <h5><a class="text-dark" href="#">د. معين عبدالملك -رئيس مجلس الوزراء</a></h5>
-                                        <div class="poster" data-src="https://www.youtube.com/embed/8YInIoAgT8g?autoplay=1" style="background-image: url('images/video-1.jpg');"></div>
-                                        <!-- <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                        <h5 class="custom-height">
+                                            <a class="text-dark" href="post-video.html">د. معين عبدالملك -رئيس مجلس الوزراء</a>
+                                        </h5>
+                                        <div class="poster" data-video="https://www.youtube.com/embed/8YInIoAgT8g?autoplay=1" >
+                                            <img class="w-100 lazyload" data-src="images/video-720.jpg" alt="...">
+                                        </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <h5><a class="text-dark" href="#">د. معين عبدالملك -رئيس مجلس الوزراء</a></h5>
-                                        <div class="poster" data-src="https://www.youtube.com/embed/8YInIoAgT8g?autoplay=1" style="background-image: url('images/video-1.jpg');"></div>
-                                        <!-- <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                        <h5 class="custom-height">
+                                            <a class="text-dark" href="post-video.html">د. معين عبدالملك -رئيس مجلس الوزراء</a>
+                                        </h5>
+                                        <div class="poster" data-video="https://www.youtube.com/embed/8YInIoAgT8g?autoplay=1" >
+                                            <img class="w-100 lazyload" data-src="images/video-720.jpg" alt="...">
+                                        </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <h5><a class="text-dark" href="#">د. معين عبدالملك -رئيس مجلس الوزراء</a></h5>
-                                        <div class="poster" data-src="https://www.youtube.com/embed/8YInIoAgT8g?autoplay=1" style="background-image: url('images/video-1.jpg');"></div>
-                                        <!-- <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                        <h5 class="custom-height">
+                                            <a class="text-dark" href="post-video.html">د. معين عبدالملك -رئيس مجلس الوزراء</a>
+                                        </h5>
+                                        <div class="poster" data-video="https://www.youtube.com/embed/8YInIoAgT8g?autoplay=1" >
+                                            <img class="w-100 lazyload" data-src="images/video-720.jpg" alt="...">
+                                        </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <h5><a class="text-dark" href="#">د. معين عبدالملك -رئيس مجلس الوزراء</a></h5>
-                                        <div class="poster" data-src="https://www.youtube.com/embed/8YInIoAgT8g?autoplay=1" style="background-image: url('images/video-1.jpg');"></div>
-                                        <!-- <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                        <h5 class="custom-height">
+                                            <a class="text-dark" href="post-video.html">د. معين عبدالملك -رئيس مجلس الوزراء</a>
+                                        </h5>
+                                        <div class="poster" data-video="https://www.youtube.com/embed/8YInIoAgT8g?autoplay=1" >
+                                            <img class="w-100 lazyload" data-src="images/video-720.jpg" alt="...">
+                                        </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <h5><a class="text-dark" href="#">د. معين عبدالملك -رئيس مجلس الوزراء</a></h5>
-                                        <div class="poster" data-src="https://www.youtube.com/embed/8YInIoAgT8g?autoplay=1" style="background-image: url('images/video-1.jpg');"></div>
-                                        <!-- <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                        <h5 class="custom-height">
+                                            <a class="text-dark" href="post-video.html">د. معين عبدالملك -رئيس مجلس الوزراء</a>
+                                        </h5>
+                                        <div class="poster" data-video="https://www.youtube.com/embed/8YInIoAgT8g?autoplay=1" >
+                                            <img class="w-100 lazyload" data-src="images/video-720.jpg" alt="...">
+                                        </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <h5><a class="text-dark" href="#">د. معين عبدالملك -رئيس مجلس الوزراء</a></h5>
-                                        <div class="poster" data-src="https://www.youtube.com/embed/8YInIoAgT8g?autoplay=1" style="background-image: url('images/video-1.jpg');"></div>
-                                        <!-- <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                        <h5 class="custom-height">
+                                            <a class="text-dark" href="post-video.html">د. معين عبدالملك -رئيس مجلس الوزراء</a>
+                                        </h5>
+                                        <div class="poster" data-video="https://www.youtube.com/embed/8YInIoAgT8g?autoplay=1" >
+                                            <img class="w-100 lazyload" data-src="images/video-720.jpg" alt="...">
+                                        </div>
                                     </div>
                                 </div>
                                 
                                 <div class="position-relative">
                                     <ol class="carousel-indicators d-flex justify-content-around">
-                                        <li data-target="#videoSlider" data-slide-to="0" style="background-image: url('images/video-1.jpg')" class="active" ></li>
-                                        <li data-target="#videoSlider" data-slide-to="1" style="background-image: url('images/video-1.jpg')"></li>
-                                        <li data-target="#videoSlider" data-slide-to="2" style="background-image: url('images/video-1.jpg')"></li>
-                                        <li data-target="#videoSlider" data-slide-to="3" style="background-image: url('images/video-1.jpg')"></li>
-                                        <li data-target="#videoSlider" data-slide-to="4" style="background-image: url('images/video-1.jpg')"></li>
-                                        <li data-target="#videoSlider" data-slide-to="5" style="background-image: url('images/video-1.jpg')"></li>
+                                        <li data-target="#videoSlider" data-slide-to="0" class="active">
+                                            <img class="w-100 lazyload" data-src="images/video-720.jpg" alt="...">
+                                        </li>
+                                        <li data-target="#videoSlider" data-slide-to="1">
+                                            <img class="w-100 lazyload" data-src="images/video-720.jpg" alt="...">
+                                        </li>
+                                        <li data-target="#videoSlider" data-slide-to="2">
+                                            <img class="w-100 lazyload" data-src="images/video-720.jpg" alt="...">
+                                        </li>
+                                        <li data-target="#videoSlider" data-slide-to="3">
+                                            <img class="w-100 lazyload" data-src="images/video-720.jpg" alt="...">
+                                        </li>
+                                        <li data-target="#videoSlider" data-slide-to="4">
+                                            <img class="w-100 lazyload" data-src="images/video-720.jpg" alt="...">
+                                        </li>
+                                        <li data-target="#videoSlider" data-slide-to="5">
+                                            <img class="w-100 lazyload" data-src="images/video-720.jpg" alt="...">
+                                        </li>
                                     </ol>
                                     
                                     <a class="carousel-control-prev" href="#videoSlider" role="button" data-slide="prev">
@@ -830,30 +860,37 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6">
-                            <h4><a href="multimedia.html"><span>إنفوجرافيك</span></a></h4>
+                        <!-- قسم الإنفوجرافيك -->
+                        <div class="col-lg-6 animate">
+                            <h4><a href="blog-grid-1.html"><span>انفوجرافيك</span></a></h4>
                             <div id="infographicSlider" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <div class="row">
                                             <div class="col-6">
                                                 <div class="card">
-                                                    <div class="cardImg" style="background-image: url('images/info-1.jpg')">
+                                                    <div class="cardImg">
+                                                        <img class="card-img lazyload" data-src="images/info-1.jpg" alt="...">
                                                         <span type="button" class="icon"><i class="far fa-image"></i></span>
                                                     </div>
                                                     <div class="card-body w-100">
-                                                        <h5 class="card-title"><a href="#">اتفاقيات تنموية بين اليمن والصندوق الكويتي</a></h5>
+                                                        <h5 class="card-title">
+                                                            <a href="post-image.html">اتفاقيات تنموية بين اليمن والصندوق الكويتي</a>
+                                                        </h5>
                                                     </div>
                                                 </div>
                                             </div>
                                             
                                             <div class="col-6">
                                                 <div class="card">
-                                                    <div class="cardImg" style="background-image: url('images/info-2.jpg')">
+                                                    <div class="cardImg">
+                                                        <img class="card-img lazyload" data-src="images/info-2.jpg" alt="...">
                                                         <span type="button" class="icon"><i class="far fa-image"></i></span>
                                                     </div>
                                                     <div class="card-body w-100">
-                                                        <h5 class="card-title"><a href="#">تأثير التصعيد العسكري لمليشيات الحوثي</a></h5>
+                                                        <h5 class="card-title">
+                                                            <a href="post-image.html">جملة من الإجراءات والتدابير الاحترازية لمواجهة فيروس كورونا</a>
+                                                        </h5>
                                                     </div>
                                                 </div>
                                             </div>
@@ -864,22 +901,28 @@
                                         <div class="row">
                                             <div class="col-6">
                                                 <div class="card">
-                                                    <div class="cardImg" style="background-image: url('images/info-3.jpg')">
+                                                    <div class="cardImg">
+                                                        <img class="card-img lazyload" data-src="images/info-3.jpg" alt="...">
                                                         <span type="button" class="icon"><i class="far fa-image"></i></span>
                                                     </div>
                                                     <div class="card-body w-100">
-                                                        <h5 class="card-title"><a href="#">اتفاقيات تنموية بين اليمن والصندوق الكويتي</a></h5>
+                                                        <h5 class="card-title">
+                                                            <a href="post-image.html">اتفاقيات تنموية بين اليمن والصندوق الكويتي</a>
+                                                        </h5>
                                                     </div>
                                                 </div>
                                             </div>
                                             
                                             <div class="col-6">
                                                 <div class="card">
-                                                    <div class="cardImg" style="background-image: url('images/info-4.jpg')">
+                                                    <div class="cardImg">
+                                                        <img class="card-img lazyload" data-src="images/info-4.jpg" alt="...">
                                                         <span type="button" class="icon"><i class="far fa-image"></i></span>
                                                     </div>
                                                     <div class="card-body w-100">
-                                                        <h5 class="card-title"><a href="#">تأثير التصعيد العسكري لمليشيات الحوثي</a></h5>
+                                                        <h5 class="card-title">
+                                                            <a href="post-image.html">جملة من الإجراءات والتدابير الاحترازية لمواجهة فيروس كورونا</a>
+                                                        </h5>
                                                     </div>
                                                 </div>
                                             </div>
@@ -890,22 +933,28 @@
                                         <div class="row">
                                             <div class="col-6">
                                                 <div class="card">
-                                                    <div class="cardImg" style="background-image: url('images/info-5.jpg')">
+                                                    <div class="cardImg">
+                                                        <img class="card-img lazyload" data-src="images/info-5.jpg" alt="...">
                                                         <span type="button" class="icon"><i class="far fa-image"></i></span>
                                                     </div>
                                                     <div class="card-body w-100">
-                                                        <h5 class="card-title"><a href="#">اتفاقيات تنموية بين اليمن والصندوق الكويتي</a></h5>
+                                                        <h5 class="card-title">
+                                                            <a href="post-image.html">اتفاقيات تنموية بين اليمن والصندوق الكويتي</a>
+                                                        </h5>
                                                     </div>
                                                 </div>
                                             </div>
                                             
                                             <div class="col-6">
                                                 <div class="card">
-                                                    <div class="cardImg" style="background-image: url('images/info-6.jpg')">
+                                                    <div class="cardImg">
+                                                        <img class="card-img lazyload" data-src="images/info-6.jpg" alt="...">
                                                         <span type="button" class="icon"><i class="far fa-image"></i></span>
                                                     </div>
                                                     <div class="card-body w-100">
-                                                        <h5 class="card-title"><a href="#">تأثير التصعيد العسكري لمليشيات الحوثي</a></h5>
+                                                        <h5 class="card-title">
+                                                            <a href="post-image.html">جملة من الإجراءات والتدابير الاحترازية لمواجهة فيروس كورونا</a>
+                                                        </h5>
                                                     </div>
                                                 </div>
                                             </div>
@@ -926,56 +975,62 @@
             </div>
 
             <div class="box-fluid">
-                <section class="container"> <!-- قسم سلايدر الصور -->
-                    <h4><a href="#" class="text-white"><span>الصور</span></a></h4>
-                    <div id="picturesSlider">
-                        <div class="carousel is-hidden">
-                            <div class="carousel-cell">
+                <section class="container animate"> <!-- قسم معرض الصور -->
+                    <h4><a href="blog-grid-1.html" class="text-white"><span>معرض الصور</span></a></h4>
+                    <div class="gallery">
+                        <div class="carousel" data-flickity='{ "lazyLoad": 1, "imagesLoaded": true, "rightToLeft": true }'>
+                            <div class="carousel-cell d-flex align-items-center">
                                 <div class="card">
-                                    <div class="cardImg" style="background-image: url('images/img1-1024×576.jpg')">
+                                    <div class="cardImg">
+                                        <img class="carousel-cell-image w-100 lazyload" data-src="images/img1-720.jpg" alt="...">
                                         <span type="button" class="icon"><i class="far fa-image"></i></span>
                                     </div>
-                                    <h5 class="custom-height"><a class="text-white" href="#">عنوان ألبوم الصور</a></h5>
+                                    <h5 class="custom-height"><a class="text-white" href="post-gallery.html">عنوان ألبوم الصور</a></h5>
                                 </div>
                             </div>
-                            <div class="carousel-cell">
+                            <div class="carousel-cell d-flex align-items-center">
                                 <div class="card">
-                                    <div class="cardImg" style="background-image: url('images/img2-1024×576.jpg')">
+                                    <div class="cardImg">
+                                        <img class="carousel-cell-image w-100 lazyload" data-src="images/img2-720.jpg" alt="...">
                                         <span type="button" class="icon"><i class="far fa-image"></i></span>
                                     </div>
-                                    <h5 class="custom-height"><a class="text-white" href="#">عنوان ألبوم الصور</a></h5>
+                                    <h5 class="custom-height"><a class="text-white" href="post-gallery.html">عنوان ألبوم الصور</a></h5>
                                 </div>
                             </div>
-                            <div class="carousel-cell">
+                            <div class="carousel-cell d-flex align-items-center">
                                 <div class="card">
-                                    <div class="cardImg" style="background-image: url('images/img3-1024×576.jpg')">
+                                    <div class="cardImg">
+                                        <img class="carousel-cell-image w-100 lazyload" data-src="images/img3-720.jpg" alt="...">
                                         <span type="button" class="icon"><i class="far fa-image"></i></span>
                                     </div>
-                                    <h5 class="custom-height"><a class="text-white" href="#">عنوان ألبوم الصور</a></h5>
+                                    <h5 class="custom-height"><a class="text-white" href="post-gallery.html">عنوان ألبوم الصور</a></h5>
                                 </div>
                             </div>
-                            <div class="carousel-cell">
+                            <div class="carousel-cell d-flex align-items-center">
                                 <div class="card">
-                                    <div class="cardImg" style="background-image: url('images/img4-1024×576.jpg')">
+                                    <div class="cardImg">
+                                        <img class="carousel-cell-image w-100 lazyload" data-src="images/img4-720.jpg" alt="...">
                                         <span type="button" class="icon"><i class="far fa-image"></i></span>
                                     </div>
-                                    <h5 class="custom-height"><a class="text-white" href="#">عنوان ألبوم الصور</a></h5>
+                                    <h5 class="custom-height"><a class="text-white" href="post-gallery.html">عنوان ألبوم الصور</a></h5>
                                 </div>
                             </div>
-                            <div class="carousel-cell">
+                            <div class="carousel-cell d-flex align-items-center">
                                 <div class="card">
-                                    <div class="cardImg" style="background-image: url('images/img5-1024×576.jpg')">
+                                    <div class="cardImg">
+                                        <img class="carousel-cell-image w-100 lazyload" data-src="images/img5-720.jpg" alt="...">
                                         <span type="button" class="icon"><i class="far fa-image"></i></span>
                                     </div>
-                                    <h5 class="custom-height"><a class="text-white" href="#">عنوان ألبوم الصور</a></h5>
+                                    <h5 class="custom-height"><a class="text-white" href="post-gallery.html">عنوان ألبوم الصور</a></h5>
                                 </div>
                             </div>
-                            <div class="carousel-cell">
+                            <div class="carousel-cell d-flex align-items-center">
                                 <div class="card">
-                                    <div class="cardImg" style="background-image: url('images/img6-1024×576.jpg')">
+                                    <div class="cardImg">
+                                        <img class="carousel-cell-image w-100 lazyload" data-src="images/img6-720.jpg" alt="...">
                                         <span type="button" class="icon"><i class="far fa-image"></i></span>
                                     </div>
-                                    <h5 class="custom-height"><a class="text-white" href="#">عنوان ألبوم الصور</a></h5>
+                                    <h5 class="custom-height"><a class="text-white" href="post-gallery.html">عنوان ألبوم الصور</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -984,23 +1039,23 @@
             </div>
 
             <div class="container">
-
-                <section> <!-- قسم سلايدر مواقع ذات صلة و بوكس الأكثر زيارة و بوكس تواصل معنا -->
+                <section>
                     <div class="row">
-                        <div class="col-lg-4 d-flex flex-column">
+                        <!-- مواقع ذات صلة -->
+                        <div class="col-lg-4">
                             <h4><span>مواقع ذات صلة</span></h4>
-                            <div id="subSlider6" class="carousel slide border rounded p-3 h-100" data-ride="carousel">
+                            <div id="subSlider6" class="carousel slide border rounded p-3" data-ride="carousel">
                                 <div class="carousel-inner text-center">
                                     <div class="carousel-item active">
                                         <a href="#" class="d-block">
-                                            <img src="images/other-site.jpg" class="" alt="">
+                                            <img class="lazyload" data-src="images/other-site.jpg" alt="...">
                                             <h5 class="text-center">وزارة التربية والتعليم</h5>
                                         </a>
                                     </div>
                                     
                                     <div class="carousel-item">
                                         <a href="#" class="d-block">
-                                            <img src="images/other-site.jpg" class="" alt="">
+                                            <img class="lazyload" data-src="images/other-site.jpg" alt="...">
                                             <h5 class="text-center">وزارة التربية والتعليم</h5>
                                         </a>
                                     </div>
@@ -1015,43 +1070,32 @@
                             </div>
                             <hr class="d-block d-lg-none">
                         </div>
-                        
+
+                        <!-- المكتب الإعلامي -->
                         <div class="col-lg-4">
-                            <h4 class="invisible">المكتب الإعلامي</h4>
+                            <h4 class="d-none d-lg-block invisible">المكتب الإعلامي</h4>
                             <div>
-                                <a href="mailto:mediaoffice@pmo-ye.net">
-                                    <img class="w-100" src="images/benner-email.jpg">
+                                <a href="mailto:info@top-dev.net">
+                                    <img class="w-100 lazyload" data-src="images/benner-email.jpg" alt="...">
                                 </a>
                             </div>
-                            <!-- <h4><span>الأكثر زيارة</span></h4>
-                            <div id="mostVisited" class="list-group list-group-flush p-0 bg-secondary">
-                                <a class="list-group-item d-flex justify-content-between" href="#">
-                                    <span>ذكرى ثورة 26 سبتمبر</span><span>الأخبار</span>
-                                </a>
-                                <a class="list-group-item d-flex justify-content-between" href="#">
-                                    <span>ذكرى ثورة 26 سبتمبر</span><span>الأخبار</span>
-                                </a>
-                                <a class="list-group-item d-flex justify-content-between" href="#">
-                                    <span>ذكرى ثورة 26 سبتمبر</span><span>الأخبار</span>
-                                </a>
-                                <a class="list-group-item d-flex justify-content-between" href="#">
-                                    <span>ذكرى ثورة 26 سبتمبر</span><span>الأخبار</span>
-                                </a>
-                            </div>
-                            <hr class="d-block d-lg-none"> -->
+                            <hr class="d-block d-lg-none">
                         </div>
-                        
+
+                        <!-- تواصل معنا -->
                         <div class="col-lg-4">
                             <h4><span>تواصل معنا</span></h4>
                             <form class="text-right">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="contactName" placeholder="اسمك (*)" required>
+                                    <input type="text" name="name" class="form-control" placeholder="اسمك (*)"
+                                            pattern=".{3,40}" title="يجب أن تكون القيمة من 3 إلى 40 حرف" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="contactEmail" placeholder="بريدك الإلكتروني (*)" required>
+                                    <input type="email" name="email" class="form-control" placeholder="بريدك الإلكتروني (*)"
+                                            pattern=".{0,50}" title="يجب أن تكون القيمة أقل من 50 حرف" required>
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control" id="contactMsg" rows="3" placeholder="الموضوع"></textarea>
+                                    <textarea class="form-control" name="message" rows="3" placeholder="الموضوع"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">إرسال</button>
                             </form>
@@ -1061,10 +1105,25 @@
             </div>
         </main>
 
-        <footer class="box-fluid">
+        <footer class="box-fluid py-2">
             <div class="container text-white text-center">
-                <span>جميع الحقوق محفوظة لرئاسة الوزراء في الجمهورية اليمنية ©</span>
+                <span>جميع الحقوق محفوظة لـ رئاسة مجلس الوزراء في الجمهورية اليمنية ©</span>
             </div>
         </footer>
+
+        <!-- prefetch Fonts -->
+        <link rel="prefetch" crossorigin as="font" href="webfonts/tssoApxBaigK_hnnS-agtnqWo572.woff2" type="font/woff2">
+        <link rel="prefetch" crossorigin as="font" href="webfonts/tsstApxBaigK_hnnQ1iFo0C3.woff2" type="font/woff2">
+        <link rel="prefetch" crossorigin as="font" href="webfonts/fa-brands-400.woff2" type="font/woff2">
+        <link rel="prefetch" crossorigin as="font" href="webfonts/fa-regular-400.woff2" type="font/woff2">
+        <link rel="prefetch" crossorigin as="font" href="webfonts/fa-solid-900.woff2" type="font/woff2">
+
+        <!-- JS Files -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/bootstrap.bundle-rtl.min.js"></script>
+        <script src="js/fontawesome.js" crossorigin="anonymous"></script>
+        <script src="js/lazysizes.min.js"></script>
+        <script src="js/flickity.pkgd.min.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>

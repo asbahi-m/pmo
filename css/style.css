@@ -24,15 +24,8 @@
 
 
 /* RTL */
-body {
+:root {
     direction: rtl;
-    text-align: right;
-    height: 100vh;
-    -webkit-display: flex;
-            display: flex;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    flex-direction: column;
 }
 .custom-file-label::after {
     content: "استعراض";
@@ -41,8 +34,14 @@ body {
 
 /* التنسيقات الافتراضية */
 body {
-    background: #fff;
+    height: 100vh;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
     font-family: 'Almarai', sans-serif;
+    background: #fff;
+    text-align: right;
 }
 h1, h2, h3, h4, h5, h6, h7 {
     line-height: 1.5;
@@ -68,15 +67,14 @@ a.text-white:hover {
             transition: all .3s ease;
 }
 .stretched-link::after {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 1;
-      pointer-events: auto;
-      content: "";
-      background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+    background-color: rgba(0, 0, 0, 0);
 }
 p {
     text-align: justify;
@@ -209,8 +207,7 @@ button:not(:disabled),
     height: 55px;
     padding-bottom: 0;
     overflow: hidden;
-    -webkit-display: flex;
-            display: flex;
+    display: flex;
 }
 .custom-height :first-child {
     margin-top: auto;
@@ -265,9 +262,12 @@ body > nav {
 body > nav .nav-link {
     color: #c28f50;
 }
+body > nav .nav-item:not(.active):not(.dropdown-item) > .nav-link {
+    border-bottom: 2px transparent solid;
+}
 body > nav .nav-item:not(.active):not(.dropdown-item):hover > .nav-link {
     color: #d9b992;
-    border-bottom: 2px #d9b992 solid;
+    border-bottom-color: #d9b992;
 }
 body > nav .nav-item.active:not(.dropdown-item) > .nav-link {
     border-bottom: 2px solid #c28f50;
@@ -340,31 +340,37 @@ nav #userProfile .picture-profile i {
 
 /* تنسيق بوكس عارض الصورة lightbox */
 #imgModal {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.8);
 }
 #imgModal .modal-dialog {
     height: 100vh;
-    max-width: 80%;
     margin: auto;
 }
 #imgModal .modal-dialog .modal-content {
     height: 100%;
     background: unset;
     border: 0;
+    padding: 10px 0;
 }
 #imgModal .modal-dialog .modal-content .modal-header {
-    position: fixed;
+    position: absolute;
     left: 0;
+    top:0;
+    width: 100%;
     border: 0;
     z-index: 1;
+    background-color: rgba(0, 0, 0, .5);
 }
 #imgModal .modal-dialog .modal-content .modal-header .modal-title {
     color: #fff;
+    margin-right: auto;
 }
 #imgModal .modal-dialog .modal-content .modal-header button.close {
     color: #fff;
     opacity: 0.8;
     z-index: 1;
+    margin-left: auto;
+    margin-right: 0;
 }
 #imgModal .modal-dialog .modal-content .modal-header button.close:hover {
     opacity: 1;
@@ -372,27 +378,28 @@ nav #userProfile .picture-profile i {
 #imgModal .modal-dialog .modal-content .modal-body {
     height: 100%;
     padding: 0;
-    padding-top: 80px;
+    padding-top: 60px;
 }
 #imgModal .modal-dialog .modal-content .modal-body img {
     max-height: 100%;
     max-width: 100%;
-    margin: 0 auto;
-    margin-bottom:auto;
+    margin-bottom: auto;
 }
 
 /* تنسيق أيقونة عارض الصورة boxLight */
 .card {
     overflow: hidden;
+    width: 100%;
 }
 .card .card-title {
     margin-bottom: 0.5rem;
 }
 :not(.blog-grid-2) .card .cardImg {
     position: relative;
-    -webkit-display: flex;
-            display: flex;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    overflow: hidden;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -476,6 +483,15 @@ main > .container:first-child > section:first-child {
 }
 
 /* تنسيق البوكس 1 - السلايدر الرئيسي */
+#primSlider .carousel-inner .carousel-item .post-category {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+#primSlider .carousel-inner .carousel-item .post-category a {
+    padding: 5px;
+    background: rgba(194,143,80, 0.6);
+}
 #primSlider .carousel-inner .carousel-item img {
     height: 416.25px;
 }
@@ -483,10 +499,10 @@ main > .container:first-child > section:first-child {
     #primSlider .carousel-inner .carousel-item {
         height: 250px;
     }
-    #primSlider .carousel-inner .carousel-item .row div:first-child {
+    #primSlider .carousel-inner .carousel-item .carousel-img {
         position: absolute;
     }
-    #primSlider .carousel-inner .carousel-item .row div:last-child {
+    #primSlider .carousel-inner .carousel-item .carousel-content {
         position: absolute;
         bottom: 0;
         background: #d9b992;
@@ -517,8 +533,7 @@ main > .container:first-child > section:first-child {
 }
 @media only screen and (max-width: 991.98px) {
     #primSlider h5 {
-        -webkit-display: flex;
-                display: flex;
+        display: flex;
         height: 55px;
         overflow: hidden;
     }
@@ -541,11 +556,11 @@ main > .container:first-child > section:first-child {
 
 #primSlider .carousel-indicators li {
     width: 100%;
+    max-width: 160px;
     height: 80px;
 }
 @media only screen and (max-width: 575.98px) {
     #primSlider .carousel-indicators li {
-        width: 100%;
         height: 30px;
     }
 }
@@ -562,6 +577,10 @@ main > .container:first-child > section:first-child {
 }
 #primSlider .carousel-indicators li,
 #videoSlider .carousel-indicators li {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    text-indent: unset;
     background-color: #d9b992;
     background-size: cover;
     background-position: center;
@@ -586,46 +605,94 @@ main > .container:first-child > section:first-child {
 
 
 /* تنسيق البوكس 2 - سلايدر الأخبار*/
-#subSlider1 h5.card-title {
-    color: #c28f50;
+.carousel .carousel-cell:not(.is-selected) img:not([src]) {
+    display:none;
 }
-#subSlider1 .card .cardImg {
+.gallery .carousel .is-selected + .carousel-cell img:not([src]) {
+    display:unset;
+}
+.news .carousel {
+    margin: 0 -15px;
+}
+.news .carousel-cell {
+    width: 33.33%;
+    min-height: 100%;
+}
+
+@media only screen and (max-width: 991.98px) {
+    .news .carousel-cell {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 767.98px) {
+    .news .carousel-cell {
+        width: 100%;
+    }
+}
+.news .card .cardImg {
     height: 190px;
 }
 @media only screen and (max-width: 399.98px) {
-    #subSlider1 .card .cardImg {
+    .news .card .cardImg {
         height: 160px;
     }
 }
 @media only screen and (min-width: 400px) and (max-width: 575.98px) {
-    #subSlider1 .card .cardImg {
+    .news .card .cardImg {
         height: 200px;
     }
 }
 @media only screen and (min-width: 576px) and (max-width: 767.98px) {
-    #subSlider1 .card .cardImg {
+    .news .card .cardImg {
         height: 269px;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
-    #subSlider1 .card .cardImg {
+    .news .card .cardImg {
         height: 370px;
     }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
-    #subSlider1 .card .cardImg {
+    .news .card .cardImg {
         height: 156.6px;
     }
 }
-#subSlider1 .carousel-control-prev, #subSlider1 .carousel-control-next {
-    width: 40px;
-    height: 80px;
-    top: 100px;
-    background: #f8f9fa;
-    color: #c28f50;
-    font-size: 40px;
+.flickity-button {
+    -webkit-transition: all 0.3s;
+            transition: all 0.3s;
 }
-#subSlider1 .carousel-indicators, 
+.flickity-button:focus {
+    box-shadow: 0 0 0 5px #c28f50;
+}
+.flickity-prev-next-button {
+    width: 30px;
+    height: 60px;
+    border-radius: 5px;
+}
+.news .flickity-button {
+    top: 25%;
+}
+.news .flickity-button-icon {
+    fill: #c28f50;
+}
+.news .flickity-page-dots {
+    top: -30px;
+    bottom: unset;
+    margin: 0 -15px;
+    text-align: left;
+}
+.news .flickity-page-dots .dot {
+    width: 30px;
+    height: 3px;
+    margin: 0 3px;
+    box-sizing: content-box;
+    background-color: #c28f50;
+    background-clip: padding-box;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-radius: 0;
+}
+
 #subSlider2 .carousel-indicators,
 #subSlider3 .carousel-indicators,
 #subSlider4 .carousel-indicators {
@@ -635,21 +702,11 @@ main > .container:first-child > section:first-child {
     margin: 0;
     padding: 0;
 }
-#subSlider1 .carousel-indicators li, 
 #subSlider2 .carousel-indicators li,
 #subSlider3 .carousel-indicators li,
 #subSlider4 .carousel-indicators li {
     background-color: #c28f50;
 }
-@media only screen and (max-width: 575.98px) {
-    #subSlider1 .carousel-control-prev, #subSlider1 .carousel-control-next {
-        width: 30px;
-        height: 60px;
-        font-size: 30px;
-    }
-}
-
-
 
 
 /* تنسيق البوكس 3 و 4 - سلايدر جلسات وقرارات مجلس الوزراء*/
@@ -863,78 +920,56 @@ section .official img {
     font-size: 30px;
 }
 
-/* تنسيق البوكس 11 - Pictures Slider */
-/* external css: flickity.css */
-#picturesSlider .carousel {
-    /* background: #FAFAFA; */
-    opacity: 1;
-    -webkit-transition: opacity 0.4s;
-            transition: opacity 0.4s;
-}
-#picturesSlider .carousel.is-hidden {
-    display: none;
-}
-#picturesSlider .carousel.flickity-enabled {
-    opacity: 1;
-}
-#picturesSlider .carousel-cell {
+/* تنسيق البوكس 11 - معرض الصور */
+.gallery .carousel .carousel-cell {
     width: 50%;
     height: 300px;
     margin-right: 10px;
-    border-radius: 5px;
-    counter-increment: carousel-cell;
-    -webkit-display: flex;
-            display: flex;
-    align-items: center;
+}
+.gallery .carousel .carousel-cell:before {
+    display: block;
+    text-align: center;
+    line-height: 200px;
+    font-size: 80px;
 }
 @media only screen and (max-width: 449.98px) {
-    #picturesSlider .carousel-cell {
+    .gallery .carousel .carousel-cell {
         height: 120px;
         width: 60%;
     }
 }
 @media only screen and (min-width: 450px) and (max-width: 767.98px) {
-    #picturesSlider .carousel-cell {
+    .gallery .carousel .carousel-cell {
         height: 180px;
         width: 66.67%;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
-    #picturesSlider .carousel-cell {
+    .gallery .carousel .carousel-cell {
         height: 200px;
     }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
-    #picturesSlider .carousel-cell {
+    .gallery .carousel .carousel-cell {
         height: 250px;
     }
 }
-/* cell number */
-#picturesSlider .carousel-cell:before {
-    display: none;
-    text-align: center;
-    content: counter(carousel-cell);
-    line-height: 200px;
-    font-size: 80px;
-    color: white;
-}
-#picturesSlider .carousel-cell:not(.is-selected) > .card {
-    height: 80%;
-}
-@media only screen and (max-width: 449.98px) {
-    #picturesSlider .carousel-cell:not(.is-selected) > .card {
-        height: 60%;
-    }
-}
-#picturesSlider .carousel-cell > .card {
+.gallery .carousel .carousel-cell > .card {
     width: 100%;
     height: 100%;
     max-height: 100%;
-    position: relative;
     -webkit-transition: all 0.5s;
             transition: all 0.5s;
 }
-#picturesSlider .carousel-cell > .card h5 {
+.gallery .carousel .carousel-cell:not(.is-selected) .card {
+    height: 80%;
+}
+@media only screen and (max-width: 449.98px) {
+    .gallery .carousel .carousel-cell:not(.is-selected) .card {
+        height: 60%;
+    }
+}
+.gallery .carousel .carousel-cell h5 {
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -944,13 +979,19 @@ section .official img {
     background: linear-gradient(rgba(0,0,0,0) 10%, rgba(0,0,0,.8) 90%);
 }
 @media only screen and (min-width: 768px) {
-    #picturesSlider .carousel-cell > .card h5 {
+    .gallery .carousel .carousel-cell h5 {
         height: max-content;
         padding-bottom: 10px;
     }
 }
-#picturesSlider .carousel-cell > .card .cardImg {
-    height: 100%;
+.gallery .carousel .flickity-page-dots {
+    bottom: -22px;
+}
+.gallery .carousel .flickity-page-dots .dot {
+    height: 4px;
+    width: 40px;
+    margin: 0;
+    border-radius: 0;
 }
 
 
@@ -1078,8 +1119,7 @@ section .official img {
 
 /* تنسيق صفحة التصنيفات مخطط شبكي-1 */
 .page .blog-grid-1 .card {
-    -webkit-display: flex;
-            display: flex;
+    display: flex;
     -webkit-flex-basis: 33.33%;
         -moz-flex-basis: 33.33%;
             flex-basis: 33.33%;
@@ -1115,8 +1155,7 @@ section .official img {
 
 /* تنسيق صفحة التصنيفات مخطط شبكي-2 */
 .page .blog-grid-2 .card {
-    -webkit-display: flex;
-            display: flex;
+    display: flex;
     -webkit-flex-basis: 25%;
         -moz-flex-basis: 25%;
             flex-basis: 25%;
@@ -1299,10 +1338,15 @@ section .official img {
     margin-right: auto;
     max-width: 75%;
 }
-.post article img:not(.img-fluid) {
+.post article img {
     max-width: 75%;
     cursor: pointer;
     margin: 0 10px;
+}
+.post article .img-fluid,
+.post article .picture-profile img,
+.post article .cardImg > img {
+    max-width: 100%;
 }
 .post article figure .figure-img {
     max-width: 100%;
@@ -1408,8 +1452,7 @@ section .official img {
     left: 0;
     z-index: 1111;
     background: rgba(0, 0, 0, .8);
-    -webkit-display: flex;
-            display: flex;
+    display: flex;
 }
 .post article figure .figure-img.full img {
     max-height: 90%;
@@ -1428,8 +1471,22 @@ section .official img {
     padding: 5px 20px;
     margin-bottom: 10px;
 }
+.post article .picture-profile {
+    height: 60px;
+    width: 60px;
+    margin-left: 5px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.post article .picture-profile img {
+    height: 100%;
+}
 .post article .picture-profile .fa-user-circle {
-    font-size: 40px;
+    margin: auto;
+    font-size: 50px;
     color: #ccc;
 }
 .post .post-audio audio {
@@ -1438,24 +1495,24 @@ section .official img {
 .post .post-video {
     text-align: center;
 }
-.post #picturesSlider .carousel {
+.post .gallery .carousel {
     margin-bottom: 50px;
 }
-.post #picturesSlider .carousel-cell {
-    height: 250px;
+.post .gallery .carousel-cell {
+    height: 240px;
 }
 @media only screen and (max-width: 449.98px) {
-    .post #picturesSlider .carousel-cell {
+    .post .gallery .carousel-cell {
         height: 120px;
     }
 }
 @media only screen and (min-width: 450px) and (max-width: 991.98px) {
-    .post #picturesSlider .carousel-cell {
+    .post .gallery .carousel-cell {
         height: 200px;
     }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
-    .post #picturesSlider .carousel-cell {
+    .post .gallery .carousel-cell {
         height: 200px;
     }
 }
